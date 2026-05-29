@@ -1,0 +1,158 @@
+.container {
+  height: 100vh;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-body-color); /* استفاده از سفید پروژه شما */
+  overflow: hidden;
+  position: relative;
+  font-family: var(--primary-font), "Tahoma", sans-serif;
+  direction: rtl;
+}
+
+/* هاله بنفش اختصاصی در پس‌زمینه */
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    var(--bg-color-violet) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  animation: move 15s infinite alternate;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.blob2 {
+  background: radial-gradient(circle, var(--cart-bg-color) 0%, transparent 70%);
+  animation-delay: -7s;
+  right: 0;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-20%, -20%) rotate(0deg);
+  }
+  to {
+    transform: translate(20%, 20%) rotate(360deg);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* عدد 404 با استایل شیشه‌ای و رنگ اصلی */
+.glitch {
+  font-size: clamp(120px, 20vw, 250px);
+  font-weight: 900;
+  color: var(--main-color);
+  line-height: 1;
+  margin: 0;
+  position: relative;
+  /* ایجاد افکت سایه چندلایه با رنگ‌های برند */
+  text-shadow:
+    7px 7px 0px var(--bg-color-violet),
+    -4px -4px 0px var(--cart-bg-color);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(2deg);
+  }
+}
+
+.title {
+  color: var(--txt-color3);
+  font-size: 2.5rem;
+  margin-top: -20px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.description {
+  color: var(--txt-color2);
+  font-size: 1.2rem;
+  max-width: 450px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+/* دکمه با استفاده از رنگ اصلی و انیمیشن درخشش */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background-color: var(--main-color);
+  color: var(--txt-color) !important;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 35px var(--bg-color-violet);
+}
+
+.btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 20px 45px var(--bg-color-violet);
+  background-color: var(--timer-color);
+}
+
+.btnIcon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btnIcon {
+  transform: translateX(-8px) rotate(-15deg);
+}
+
+/* المنت تزئینی دایره چرخان دور 404 */
+.circleDecoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  border: 2px dashed var(--main-color);
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ذرات ریز پس‌زمینه با رنگ برند */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--main-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.05;
+}

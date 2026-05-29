@@ -1,0 +1,141 @@
+.banner-section {
+  margin-top: 10rem;
+  padding-top: 8rem;
+}
+
+/* ================= Start Swiper Hero Section ================= */
+
+.hero-section-slider {
+  width: 100%;
+  height: 40rem;
+  border-radius: 2.5rem;
+}
+
+.hero-section-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+.hero-section-slider .swiper-pagination-bullet {
+  background-color: rgba(172, 105, 213, 1) !important;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.hero-section-slider .swiper-pagination-bullet-active {
+  background-color: rgba(119, 28, 176, 1) !important;
+  width: 1.9rem !important;
+  height: 0.8rem !important;
+  border-radius: 0.8rem !important;
+}
+
+.hero-section-slider .swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+}
+
+.hero-section-slider .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+}
+
+.hero-section-slider .swiper-button-prev svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.hero-section-slider .swiper-button-next svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+  position: static;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-nav-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 35px;
+  right: 120px;
+  z-index: 10;
+}
+
+.hero-section-slider .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+}
+
+.hero-section-slider .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+}
+
+.swiper-pagination-custom {
+  position: absolute;
+  text-align: center;
+  transform: translateZ(0);
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+/* ================= Start Swiper Hero Section  ================= */
+
+@media screen and (max-width: 1200px) {
+  .hero-section-slider {
+    height: 30rem !important;
+  }
+}
+
+@media screen and (max-width: 768) {
+    .banner-section {
+        padding-top: 2.5rem;
+    }
+
+  .hero-section-slider {
+    height: 21rem !important;
+  }
+
+  .hero-section-slider .swiper-button-next {
+    display: none;
+  }
+
+  .hero-section-slider .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576) {
+  .hero-section-slider {
+    height: 13.5rem !important;
+    border-radius: 1rem;
+  }
+}

@@ -1,0 +1,81 @@
+.product-introduction {
+  border-top: 1px solid #cccc;
+  border-bottom: 1px solid #cccc;
+  padding: 7rem 0;
+  margin: 5rem 0;
+}
+
+.all-details {
+  max-height: 25rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.all-details-open {
+  max-height: 200rem; /* عدد بزرگتر از ارتفاع محتوا */
+  transition: max-height 0.54s ease;
+}
+
+.description-container {
+  max-width: 100%;
+  margin: auto;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.description-right {
+  width: 73%;
+}
+
+.description-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.description-text {
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  letter-spacing: 3%;
+  font-size: 1.8rem;
+}
+
+.description-text.limited {
+  transition: all 0.2s ease-in;
+  max-height: 25.5rem;
+  /* حدود 4 خط متن */
+  position: relative;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.toggle-btn {
+  font-family: var(--yekan);
+  background: none;
+  border: none;
+  color: #831fc1;
+  cursor: pointer;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.description-left {
+  width: 23%;
+  height: 31.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-left img {
+  width: 100%;
+}

@@ -1,0 +1,133 @@
+.abous-us-sections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abous-us-sections img {
+  width: 70%;
+  height: 100%;
+}
+
+.abous-us-text {
+  width: 65%;
+}
+
+.abous-us-img {
+  height: 25rem;
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abous-us-sections-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.abous-us-sections-title {
+  font-weight: 600;
+  font-family: "yekan-semibold";
+  font-size: 20px;
+  position: relative;
+  border-radius: 0.5rem;
+  padding-right: 2.2rem;
+}
+
+.abous-us-sections-title::before {
+  content: "";
+  position: absolute;
+  right: -15px;
+  width: 4rem;
+  height: 0.8rem;
+  transform: rotate(90deg);
+  background-color: var(--main-color);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0.8rem;
+}
+
+
+/* ? Media Queries ================================================================ */
+
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+    .hero-section-slider {
+        height: 30rem;
+    }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+    .abous-us-sections img {
+        height: 70%;
+    }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+.main {
+        padding-top: 2rem;
+    }
+    .about-us-title h1 {
+        text-align: center;
+    }
+
+    .abous-us-sections {
+        flex-direction: column-reverse;
+    }
+
+    .abous-us-sections-revers {
+        flex-direction: column !important;
+    }
+
+    .abous-us-sections-right,
+    .abous-us-img {
+        width: 100%;
+    }
+
+    .abous-us-sections img {
+        max-width: 25rem;
+        height: 95%;
+    }
+
+    .about-us-email {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-us-email-item {
+        width: 100%;
+    }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+    .abous-us-sections img {
+        max-width: 20rem;
+        height: 85%;
+    }
+
+    .store-map {
+        height: 20rem;
+    }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {}

@@ -1,0 +1,149 @@
+/* ========== Base Table ========== */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse; /* تغییر از separate به collapse برای حذف فاصله‌ها */
+}
+
+.admin-table__head th {
+  background: transparent;
+  color: var(--txt-color3);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--border-color-dashboard);
+}
+
+.admin-table__row {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color-dashboard);
+}
+
+.admin-table__cell {
+  padding: 10px;
+  color: var(--txt-color3);
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+  height: 5rem;
+}
+
+/* ========== Specific Columns (Modifiers) ========== */
+.admin-table__cell--id {
+  width: 40px;
+}
+
+.admin-table__cell--user {
+  width: 160px;
+}
+
+.admin-table__cell--date {
+  width: 150px;
+}
+
+.admin-table__cell--product {
+  width: auto;
+}
+
+.admin-table__cell--status {
+  width: 150px;
+}
+
+.admin-table__cell--price {
+  white-space: nowrap;
+  width: 120px;
+}
+
+/* ========== Status ========== */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 2.4rem;
+  font-size: 12px;
+}
+
+.status img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.status--processing {
+  background-color: var(--FFF2D5);
+  color: #ffae00;
+}
+
+.status--paid {
+  background-color: var(--ECFFEA);
+  color: #12de00;
+}
+
+.status--cancelled {
+  background-color: var(--380F0F);
+  color: #ff0000;
+}
+
+/* ========== Utilities ========== */
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.product-dropdown {
+  position: relative; /* لیست بازشو نسبت به این باکس موقعیت می‌گیرد */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: var(--bg-color-dashboard);
+  width: 250px; /* عرض ثابت برای باکس */
+  background-color: var(--e3ffffbd);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* وقتی باز می‌شود، جلوی بقیه عناصر باشد */
+.product-dropdown[open] {
+  z-index: 100;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item {
+  padding: 6px;
+}
+
+.product-summary {
+  padding: 10px;
+  font-weight: 600;
+  color: var(--txt-color3);
+
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* لیست بازشو که شناور می‌شود */
+.product-list-expanded {
+  position: absolute; /* کلید اصلی: لیست روی همه چیز قرار می‌گیرد */
+  top: 100%; /* زیر summary قرار بگیرد */
+  right: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.2s ease;
+}
+
+/* رنگ‌بندی یکی در میان آیتم‌ها */
+.product-list-expanded .product-item:nth-child(even) {
+  background-color: var(--orders-bg-color2);
+}
+.product-list-expanded .product-item:nth-child(odd) {
+  background-color: var(--orders-bg-color1);
+}

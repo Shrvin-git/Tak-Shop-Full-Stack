@@ -1,0 +1,99 @@
+.newsletter-container {
+  background-color: rgba(55, 13, 81, 1);
+  color: var(--txt-color);
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-right {
+  width: 28%;
+}
+
+.newsletter-left {
+  width: 55%;
+}
+
+.newsletter-right h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.newsletter-right p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #eaeaea;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(234, 234, 234, 1);
+  border-radius: 0.8rem;
+  /* padding-right: 15px; */
+  padding: 5px 15px 5px 5px;
+}
+
+.newsletter-input {
+  background-color: transparent;
+  color: var(--txt-color);
+  font-size: 1.6rem;
+}
+
+.newsletter-input::placeholder {
+  color: rgb(251, 251, 251);
+  font-size: 1.6rem;
+  font-family: "yekan";
+}
+
+.newsletter-button {
+  width: 10.6rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  border-radius: 0.8rem;
+  color: var(--txt-color);
+  font-family: "yekan";
+  font-size: 1.6rem;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  box-shadow: 0 0 1rem var(--box-shadow);
+}
+
+@media screen and (max-width: 1200px) {
+  .newsletter-right {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-wrapper {
+    flex-direction: column;
+  }
+  .faq_right,
+  .faq_left,
+  .newsletter-right,
+  .newsletter-left {
+    width: 100% ;
+  }
+
+  .newsletter-right{
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .accordion_title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,382 @@
+.main-content {
+}
+
+.settings {
+  display: none;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.sections-settings {
+  display: flex;
+  gap: 3rem;
+  color: var(--s5D1689);
+}
+
+.main-setting-inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+  row-gap: 1.6rem;
+}
+
+.section-settings-items {
+  cursor: pointer;
+  position: relative;
+}
+
+.section-settings-items:first-child {
+  padding-right: 2rem;
+}
+
+.sections-settings-mobile {
+  display: none;
+  position: relative;
+  width: 13rem;
+}
+
+.sections-settings-mobile select {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: yekan;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.sections-settings-mobile select:focus {
+  border: none;
+  outline: none;
+}
+
+.sections-settings-mobile select option:focus {
+  border: none;
+  outline: none;
+}
+
+.sections-settings-mobile div {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0.5rem;
+}
+
+.section-settings-items--active::after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 0.6rem;
+  background-color: var(--main-color);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.main-setting-shop-form {
+  margin-top: 3.2rem;
+}
+
+.title {
+  color: var(--s5D1689);
+}
+
+.main-setting-inputs {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name-input,
+.default-setting-input-name {
+  font-size: 1.4rem;
+  color: var(--c737373);
+}
+
+.inputs {
+  box-shadow: 0px 2px 6px 0px #00000026;
+  height: 5.7rem;
+  position: relative;
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  background-color: var(--bg-color-dashboard);
+}
+
+.inputs input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  font-family: yekan-semibold;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+}
+
+.inputs i {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 2rem;
+}
+
+.default-setting-shop {
+  margin-top: 3.2rem;
+}
+
+.default-setting-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4.5rem;
+  margin-top: 1.8rem;
+}
+
+.default-setting-card {
+  width: 48%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.default-setting-card div {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 6px 0px #00000026;
+  position: relative;
+  border-radius: 0.8rem;
+  background-color: var(--bg-color-dashboard);
+}
+
+.default-setting-card select {
+  width: 100%;
+  height: 5.7rem;
+  border-radius: 0.8rem;
+  color: var(--txt-clor3);
+  border: none;
+  font-family: yekan-semibold;
+  font-weight: 400;
+  font-style: Regular;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.default-setting-card i {
+  position: absolute;
+  margin: auto;
+  left: 2rem;
+}
+
+/* select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+} */
+
+.ddd {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+}
+
+.advanced-setting {
+  width: 48%;
+  flex-grow: 0;
+}
+
+.default-setting-input-name {
+}
+
+.store-display-setting {
+  margin-top: 3.2rem;
+}
+
+.store-display-readio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 3.2rem;
+}
+
+.store-display-readio {
+  width: 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ! تنظیمات مربوط به دکمه های سوییچ  */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 3px solid var(--main-color);
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--main-color);
+  /* بنفش */
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* حالت فعال */
+.toggle-switch input:checked + .slider {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translate(25px, -50%);
+  background-color: white;
+}
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+  .sections-settings {
+    gap: 1.5rem;
+    font-size: 14px;
+  }
+
+  .section-settings-items--active::after {
+    width: 5rem;
+  }
+
+  .section-settings-items:first-child {
+    padding-right: 1rem;
+  }
+
+  .store-display-readio {
+    font-size: 1.4rem;
+  }
+
+  .store-display-readio-container {
+    flex-wrap: wrap;
+  }
+
+  .store-display-readio {
+    width: 30%;
+  }
+
+  .dashboard-nav {
+    right: 21rem;
+  }
+
+  .main-content {
+    margin-right: 21rem;
+  }
+
+  .main-setting-inputs {
+    width: 100%;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+  .dashboard-nav {
+    right: 0;
+  }
+
+  .main-content {
+    margin-right: 0;
+  }
+
+  .sections-settings {
+    display: none;
+  }
+
+  .sections-settings-mobile {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  .store-display-readio {
+    width: 45%;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .ddd {
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .advanced-setting {
+    width: 100%;
+  }
+
+  .store-display-readio {
+    font-size: 1.2rem;
+  }
+
+  .table-products-information {
+    display: none;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {
+}

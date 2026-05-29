@@ -1,0 +1,142 @@
+.user-notification {
+  display: none;
+}
+
+.user-panel-header {
+}
+
+.user-panel-header-title {
+}
+
+.user-panel-header-desc {
+}
+
+.notification-wrapper {
+  background-color: var(--bg-color);
+  padding: 2.4rem;
+  border-radius: 9px;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 2.5rem;
+}
+
+.notification-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.read-all-notif {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--main-color);
+}
+
+.all-notif {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.notif-items {
+  border-bottom: 1px solid #cccc;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.notif-items-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.notif-header-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--main-color);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif-items-main {
+  color: var(--c737373);
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.notif-items-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.notif-date {
+}
+
+.notif-category {
+}
+
+.notif-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--main-color);
+}
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .notif-items-header {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  .notif-header-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {
+}

@@ -1,0 +1,170 @@
+/*!====================================== User Main Info ========================================*/
+
+.main {
+  margin-top: 7rem;
+}
+
+.container {
+}
+
+.profile-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 13rem;
+}
+.user-panel-container {
+  width: 72%;
+}
+#edit-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 3rem;
+}
+
+.user-profile-content {
+  display: block;
+}
+
+.user-panel-header {
+}
+
+.user-panel-header-title {
+}
+
+.user-panel-header-desc {
+}
+
+.form-items {
+  width: 48%;
+}
+
+.form-items label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: var(--s737373);
+}
+
+.form-items input {
+  width: 100%;
+  background-color: transparent !important;
+  border-radius: 0.9rem;
+  padding-right: 1.2rem;
+  font-size: 1.8rem;
+  color: var(--links-color);
+  font-family: yekan;
+}
+
+.input-wrapper {
+  background-color: var(--border-profile);
+  box-shadow: 0px 2px 6px 0px #00000026;
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  justify-content: space-between;
+}
+
+.input-right {
+  width: 80%;
+}
+
+.input-right,
+.edit-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input-right svg path {
+  stroke: var(--links-color);
+}
+
+.edit-btn {
+}
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .input-wrapper {
+    padding: 1rem;
+  }
+
+  .form-items input {
+    font-size: 1.4rem;
+  }
+
+  .edit-btn svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .input-right {
+    width: 85%;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .input-wrapper {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .form-items {
+    width: 100%;
+  }
+
+  .input-right svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .user-panel-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .user-panel-header-desc {
+    font-size: 12px;
+  }
+
+  .user-panel-header-title {
+    font-size: 2rem;
+  }
+
+  #edit-info {
+    row-gap: 2rem;
+  }
+
+  .form-items input {
+    font-size: 1.6rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {
+}

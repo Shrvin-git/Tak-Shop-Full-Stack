@@ -1,0 +1,21 @@
+.popular-products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--380F0F);
+  color: #ff0000;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid #ff0000;
+}
+
+.empty span {
+}

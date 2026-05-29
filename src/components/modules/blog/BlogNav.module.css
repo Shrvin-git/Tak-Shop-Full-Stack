@@ -1,0 +1,145 @@
+
+
+.blog2:hover .blog-desc,
+.blog3:hover .blog-desc,
+.blog4:hover .blog-desc {
+  opacity: 1;
+  visibility: visible;
+}
+
+.blog-desc {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 14.67%,
+    rgba(0, 0, 0, 0.85) 82.83%
+  );
+}
+
+.blog-desc-wrapper {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.blog-desc-title {
+  padding-bottom: 2rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.blog-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.blog-info-date svg path,
+.blog-info-category svg path {
+  fill: #fff;
+}
+
+.blog-info-date,
+.blog-info-category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.blog-header {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.blog-header img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0.9rem;
+}
+
+.blog1 {
+  height: 8rem;
+}
+
+.blog2 {
+  height: 46rem;
+}
+
+.blog-header-left,
+.blog-header-righ {
+  width: 49.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-header-left img {
+  width: 100%;
+}
+
+.blog3 {
+  height: 27rem;
+}
+
+.blog4 {
+  height: 27rem;
+}
+
+.blog1,
+.blog2,
+.blog3,
+.blog4 {
+  border-radius: 0.9rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.section_header_container {
+  margin-top: 11rem;
+}
+
+.category {
+  margin-top: 10rem;
+}
+
+.section_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.section_title::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: var(--main-color);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.section_desc {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--txt-color3);
+  display: block;
+  margin-bottom: 3.5rem;
+}

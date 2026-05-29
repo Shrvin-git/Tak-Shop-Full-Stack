@@ -1,0 +1,13 @@
+.show_all {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--main-color);
+  text-shadow: 0 0 10px #00000033;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}

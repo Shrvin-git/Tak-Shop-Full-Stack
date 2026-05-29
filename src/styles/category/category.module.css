@@ -1,0 +1,38 @@
+.main {
+  margin-top: 10rem;
+  padding-top: 8rem;
+}
+
+.all-labtop-wrapper {
+  display: flex;
+}
+
+.all-products-left {
+  width: 100%;
+}
+
+.all-products-left-wrapper {
+padding: 1.8rem 1.8rem 1.8rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.container {
+  width: 1250px;
+}
+
+.all-labtop-wrapper {
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.all-products-left {
+  width: 70%;
+}
+
+.all-products-left {
+  width: 100%;
+}

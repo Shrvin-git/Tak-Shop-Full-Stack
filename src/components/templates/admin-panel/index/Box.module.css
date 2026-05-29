@@ -1,0 +1,123 @@
+.item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-top span:nth-child(2) {
+  cursor: pointer;
+}
+.box_active {
+  background-color: #370d51 !important;
+}
+
+.box_active_title {
+  color: white !important;
+}
+.dashboard-card-elem {
+  width: 25%;
+  height: 16rem;
+  border-radius: 4px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-card-elem,
+.dashboard-card {
+  box-shadow: 0px 0px 10px 0px #9124d41a;
+  background-color: var(--bg-color-dashboard);
+}
+
+.item-2 {
+}
+
+.card,
+.chart-card,
+.card-chhart,
+.donut-box {
+  padding: 0 2.3rem !important;
+}
+
+.card-chhart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2.4rem;
+}
+
+.lol {
+  text-align: center;
+}
+
+.lol h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--svg-color);
+}
+
+.lol p {
+  font-size: 12px;
+  color: var(--c737373);
+}
+
+.today-order {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+}
+
+.today-order-num,
+.chart-percentage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-family: yekan-semibold;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.today-order-num,
+.chart-percentage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-family: yekan-semibold;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+  .dashboard-card-elem {
+    width: 48.5%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dashboard-card-elem,
+  .dashboard-card {
+    width: 100%;
+  }
+}

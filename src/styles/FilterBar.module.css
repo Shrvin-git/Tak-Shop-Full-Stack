@@ -1,0 +1,52 @@
+.filter-bar__icon {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #737373;
+}
+
+
+
+
+
+
+.filter-bar{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.filter-bar__item select {
+  font-family: yekan;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  color: #370d51;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.filter-bar__item select:hover {
+  border-color: #7a1cac;
+  box-shadow: 0 0 5px rgba(122, 28, 172, 0.4);
+}
+
+.filter-bar__item select:hover {
+  border-color: #c3a0d9;
+}
+
+.dashboard-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}

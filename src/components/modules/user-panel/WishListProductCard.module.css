@@ -1,0 +1,233 @@
+.popular-products {
+  display: none;
+}
+
+.user-panel-header {
+}
+
+.user-panel-header-title {
+}
+
+.user-panel-header-desc {
+}
+
+.popular-products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.popular-products-items {
+  background-color: var(--bg-color);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  width: 32%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popular-products-cover {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-products-cover img {
+  width: 50%;
+  height: auto;
+}
+
+.popular-products-name {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popular-products-review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.send-product {
+}
+
+.send-product div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--bg-color-violet);
+  font-size: 12px;
+  border-radius: 2.4rem;
+  color: var(--bg-label-color);
+  padding: 0 0.8rem;
+}
+
+.popular-products-reting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #efc003;
+}
+
+.popular-products-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular-products-main div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popular-products-main div del {
+  font-size: 15px;
+}
+
+.popular-products-main div span {
+  font-size: 10px;
+}
+
+.popular-products-offet {
+  background-color: #d32f2f;
+  border-radius: 16px;
+  padding: 3px 12px 0 12px;
+  font-size: 12px;
+  color: var(--txt-color);
+}
+
+.popular-products-price span {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
+
+.popular-products-price {
+  font-size: 12px !important;
+  text-align: center;
+  font-weight: 400 !important;
+}
+
+.add-to-cart {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.delete-in-popular-product {
+  border: 1px solid #ff4545;
+  color: #ff4545;
+  margin-top: 1rem;
+}
+
+.delete-in-popular-product,
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.9rem;
+  height: 3.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.delete-in-popular-product:hover {
+  box-shadow: 0 0 8px #ff6c6cda;
+}
+
+.add-to-cart:hover {
+  box-shadow: 0 0 8px #d187ff;
+}
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .popular-products-items {
+    width: 47%;
+  }
+
+  .popular-products-name {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .popular-products-items {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .popular-products-cover {
+    height: auto;
+    width: 30%;
+  }
+
+  .popular-products-cover img {
+    width: 100%;
+  }
+
+  .popular-products-left {
+    width: 65%;
+  }
+
+  .popular-products-name,
+  .popular-products-price span,
+  .popular-products-main div del {
+    font-weight: 300;
+  }
+
+  .delete-in-popular-product {
+    margin-top: 0.8rem;
+  }
+
+  .popular-products-main div del {
+    font-size: 12px;
+  }
+
+  .delete-in-popular-product,
+  .add-to-cart {
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+  }
+
+  .delete-in-popular-product svg,
+  .add-to-cart svg {
+    width: 1.6rem;
+    height: 1.8rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {
+}

@@ -1,0 +1,86 @@
+.product-header_right {
+  width: 29%;
+  padding-left: 2rem;
+  border-left: 1px solid #cccccc;
+}
+
+.product-header_right--activ {
+  transition: transform 0.3s ease;
+}
+
+.product-header_right img {
+  width: 100%;
+}
+
+.product-images-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  gap: 0.6rem;
+}
+
+.product-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11rem;
+  height: 8rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.product-images img {
+  width: 90% !important;
+  border-radius: 6px;
+  transition: filter 0.3s ease;
+  display: block;
+}
+
+.product-images-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0px);
+  background-color: #ffffff8a;
+  z-index: 10;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.product-images.active .product-images-blur {
+  backdrop-filter: none;
+  background-color: transparent;
+  width: 13rem;
+  height: 10rem;
+}
+
+.product-header_right_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svg-product {
+  cursor: pointer;
+}
+
+.svg-product svg path {
+  stroke: var(--s292929);
+}
+
+.popular-products-btn svg path {
+  stroke: #d32f2f !important;
+  transition: all 0.2s ease;
+}
+
+.like-product {
+  fill: #d32f2f;
+  transition: all 0.2s ease;
+  stroke: #d32f2f;
+}

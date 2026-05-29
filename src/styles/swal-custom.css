@@ -1,0 +1,131 @@
+/* =========================
+   swal-custom.css (refactor)
+   ========================= */
+
+/* 1) Scoped variables for swal */
+.swal-glass {
+  /* typography */
+  --swal-font: var(--primary-font);
+
+  /* colors */
+  --swal-text: var(--admin-text);
+  --swal-title: var(--txt-color3);
+  --swal-body: var(--txt);
+
+  --swal-primary: var(--button-color);
+  --swal-primary-text: var(--txt-color);
+
+  --swal-surface: var(--bg-Body);
+  --swal-border: var(--border-color);
+  --swal-border-2: var(--border-color2);
+  --swal-shadow: var(--box-shadow);
+
+  /* sizing */
+  --swal-radius: 20px;
+  --swal-btn-radius: 12px;
+}
+
+/* 2) Popup */
+.swal2-popup.swal-glass {
+  font-family: var(--swal-font) !important;
+  border-radius: var(--swal-radius) !important;
+
+  /* background: color-mix(
+    in srgb,
+    var(--swal-surface) 85%,
+    transparent
+  ) !important;
+  backdrop-filter: blur(14px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(130%) !important; */
+
+  border: 1px solid color-mix(in srgb, var(--swal-border) 70%, transparent) !important;
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--swal-shadow) 35%, transparent) !important;
+
+  color: var(--swal-text) !important;
+}
+
+/* fallback for browsers without color-mix */
+@supports not (background: color-mix(in srgb, white, transparent)) {
+  .swal2-popup.swal-glass {
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(38, 38, 38, 0.22) !important;
+  }
+}
+
+/* 3) Title / Text */
+.swal2-title.swal-glass__title {
+  font-size: 1.9rem !important;
+  font-weight: 900 !important;
+  color: var(--swal-title) !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.swal2-html-container.swal-glass__text {
+  font-size: 1.45rem !important;
+  line-height: 1.9 !important;
+  color: var(--swal-body) !important;
+  opacity: 0.95 !important;
+}
+
+/* 4) Buttons */
+.swal2-actions .swal2-confirm.swal-glass__btn,
+.swal2-actions .swal2-cancel.swal-glass__btn {
+  border-radius: var(--swal-btn-radius) !important;
+  padding: 12px 22px !important;
+  margin: 10px 8px 0 !important;
+
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+
+  cursor: pointer !important;
+  outline: none !important;
+
+  border: 1px solid transparent !important;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease !important;
+}
+
+/* Confirm */
+.swal2-actions .swal2-confirm.swal-glass__btn--confirm {
+  background: var(--swal-primary) !important;
+  color: var(--swal-primary-text) !important;
+  box-shadow: 0 10px 18px
+    color-mix(in srgb, var(--swal-primary) 35%, transparent) !important;
+}
+
+.swal2-actions .swal2-confirm.swal-glass__btn--confirm:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 22px
+    color-mix(in srgb, var(--swal-primary) 45%, transparent) !important;
+}
+
+/* Cancel */
+.swal2-actions .swal2-cancel.swal-glass__btn--cancel {
+  background: color-mix(
+    in srgb,
+    var(--bg-color-violet) 65%,
+    transparent
+  ) !important;
+  color: var(--swal-title) !important;
+  border-color: color-mix(
+    in srgb,
+    var(--swal-border-2) 30%,
+    transparent
+  ) !important;
+}
+
+.swal2-actions .swal2-cancel.swal-glass__btn--cancel:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* 5) Icon container (just scale/spacing) */
+/* .swal2-icon.swal-glass__icon {
+  margin-top: 16px !important;
+  transform: scale(0.92) !important;
+} */

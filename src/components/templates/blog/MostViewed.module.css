@@ -1,0 +1,6 @@
+.most-visited-blog-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+}

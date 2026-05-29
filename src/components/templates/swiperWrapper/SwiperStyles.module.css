@@ -1,0 +1,21 @@
+/* .best-sell-slider .swiper-button-prev,
+.best-sell-slider .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+} */
+
+.swiper-nav-buttons .swiper-button-prev,
+.swiper-nav-buttons .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--slider-btn) !important;
+  border-radius: 1rem !important;
+}

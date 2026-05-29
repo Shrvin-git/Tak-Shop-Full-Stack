@@ -1,0 +1,214 @@
+.payment_procedures_levels div span {
+  font-size: 13px;
+  color: #737373;
+}
+
+.payment_procedures_levels div h4 {
+  font-size: 16px;
+  color: var(--links-color);
+}
+.svg-cart-wrapper {
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid var(--border-color2);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svg-cart-wrapper-active {
+  background-color: var(--main-color);
+  border: none !important;
+}
+.payment_procedures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #cccccc;
+}
+
+.payment_procedures_levels {
+  width: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  height: 15.5rem;
+  position: relative;
+}
+
+.svg-cart-wrapper {
+  position: relative;
+}
+
+.svg-cart-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 0.2rem;
+  background-color: #a3a3a3;
+  bottom: 0;
+  top: 2px;
+  margin: auto;
+  left: -143px;
+}
+
+.svg-cart-wrapper-activee::after {
+  content: none;
+}
+
+.first-level {
+  color: var(--main-color);
+}
+
+/*? ====================== Base Styles (از متن اصلی تو) ====================== */
+
+.payment_procedures_levels div span {
+  font-size: 13px;
+  color: #737373;
+}
+
+.payment_procedures_levels div h4 {
+  font-size: 16px;
+  color: var(--links-color);
+}
+
+.payment_procedures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #cccccc;
+}
+
+.payment_procedures_levels {
+  width: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  height: 15.5rem;
+  position: relative;
+}
+
+.svg-cart-wrapper {
+  position: relative;
+}
+
+.svg-cart-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 0.2rem;
+  background-color: #a3a3a3;
+  bottom: 0;
+  top: 2px;
+  margin: auto;
+  left: -143px;
+}
+
+.svg-cart-wrapper-activee::after {
+  content: none;
+}
+
+.first-level {
+  color: var(--main-color);
+}
+
+/* ============================ Media Queries ============================ */
+
+/* ---------- max-width: 1200px ---------- */
+@media screen and (max-width: 1200px) {
+  .payment_procedures {
+    gap: 6rem;
+  }
+
+  .svg-cart-wrapper::after {
+    width: 7rem;
+    left: -80px;
+  }
+}
+
+/* ---------- max-width: 992px ---------- */
+@media screen and (max-width: 992px) {
+  .payment_procedures_levels {
+    height: 12.5rem;
+  }
+
+  .svg-cart-wrapper {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -90px;
+  }
+}
+
+/* ---------- max-width: 576px ---------- */
+@media screen and (max-width: 576px) {
+  .payment_procedures_levels div h4 {
+    font-size: 1rem;
+  }
+
+  .payment_procedures {
+    gap: 0rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -40px;
+    width: 3rem;
+  }
+}
+
+/* مرحله فعال */
+.active h4,
+.active span {
+  color: var(--main-color) !important;
+  font-weight: bold;
+}
+
+/* دایره فعال */
+.activeCircle {
+  background-color: var(--main-color) !important;
+  border: none !important;
+}
+
+/* حذف خط زیر دایره برای مرحله فعال */
+.activeCircle::after {
+  content: none !important;
+}
+
+/* ---------- max-width: 430px ---------- */
+@media screen and (max-width: 430px) {
+  .svg-cart-wrapper {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -30px;
+    width: 2rem;
+  }
+
+  .first-level {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: bolder;
+  }
+}

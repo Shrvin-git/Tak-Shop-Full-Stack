@@ -1,0 +1,491 @@
+.sidebar-active::before {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -1.5rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.sidebar-active::before {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -1.5rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.sidebar-active svg path {
+  fill: var(--main-color);
+}
+
+.sidebar-active svg path {
+  fill: var(--main-color);
+}
+
+.sidebar-active span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.sidebar-active span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.dashboard-elem {
+  position: relative;
+  display: flex;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+.dashboard-elem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.dashboard-elem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.dashboard-elem-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-elem-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  padding: 3.2rem 3.2rem 2rem 3.2rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  background-color: var(--bg-color-dashboard);
+
+  z-index: 1000;
+  /* overflow-y: auto; */
+  border-left: 1px solid var(--border-color-dashboard);
+}
+.admin-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.admin-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* بهترین کیفیت داخل دایره */
+  object-position: center; /* عکس دقیقاً از مرکز کراپ می‌شود */
+  image-rendering: auto; /* جلوگیری از افت کیفیت */
+  border: 3px solid var(--border-profile2);
+}
+
+.website_logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: yekan-semibold;
+  color: var(--main-color);
+  gap: 0.8rem;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-elem-container {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sidebar-active::before {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -1.5rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.sidebar-active::before {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -1.5rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.sidebar-active svg path {
+  fill: var(--main-color);
+}
+
+.sidebar-active svg path {
+  fill: var(--main-color);
+}
+
+.sidebar-active span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.sidebar-active span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.dashboard-elem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.dashboard-elem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.sidebar-active .dashboard-elem-icon {
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+
+.dashboard-elem-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-elem-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  padding: 3.2rem 3.2rem 2rem 3.2rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  background-color: var(--bg-color-dashboard);
+
+  z-index: 1000;
+  /* overflow-y: auto; */
+  border-left: 1px solid var(--border-color-dashboard);
+}
+
+.admin-profile img {
+  width: 9.8rem;
+  height: 9.8rem;
+  border-radius: 100%;
+  border: 3px solid var(--border-profile2);
+}
+
+.website_logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: yekan-semibold;
+  color: var(--main-color);
+  gap: 0.8rem;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-elem-container {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dashboard-elem-container {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.log-out-admin {
+  color: #df0f0f;
+}
+/* =========================================================================================== */
+/* @media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    width: 21.5rem;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    margin-top: 7rem;
+    background-color: var(--bg-color-dashboard);
+    box-shadow: 0 0 15px var(--box-shadow);
+
+    border-radius: 0.6rem;
+  }
+
+  .admin-profile img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .dashboard-elem {
+    font-size: 14px;
+  }
+
+  .dashboard-elem-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dashboard-elem-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dashboard-elem-container {
+    gap: 1.5rem;
+  }
+
+  .dashboard-elem-container {
+    gap: 1.5rem;
+  }
+
+  .sidebar-active::before {
+    width: 0.5rem;
+    height: 3.5rem;
+  }
+
+  .sidebar-active::before {
+    width: 0.5rem;
+    height: 3.5rem;
+  }
+
+  .website_logo {
+    font-size: 3rem;
+  }
+
+  .sidebar-bottom {
+    margin-top: -2rem;
+  }
+
+  .sidebar-bottom {
+    margin-top: -2rem;
+  }
+
+  .website_logo {
+    margin-bottom: 1rem;
+  }
+
+  .website_logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3.4rem;
+  }
+
+  .sidebar-active span {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-active span {
+    font-size: 1.5rem;
+  }
+
+  .website_logo div svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar--hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    margin-top: 7rem;
+    background-color: var(--bg-color-dashboard);
+    box-shadow: 0 0 15px var(--box-shadow);
+
+    border-radius: 0.6rem;
+  }
+
+  .sidebar-active::before {
+    width: 0.5rem;
+    height: 3.5rem;
+  }
+
+  .sidebar-bottom {
+    margin-top: -2rem;
+  }
+
+  .sidebar-active span {
+    font-size: 1.5rem;
+  }
+
+  .sidebar--hidden {
+    display: none !important;
+  }
+
+  .website_logo {
+    font-size: 3rem;
+  }
+
+  .website_logo {
+    margin-bottom: 1rem;
+  }
+
+  .website_logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3.4rem;
+  }
+
+  .website_logo div svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .admin-profile img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .sidebar-bottom {
+    margin-top: -2rem;
+  }
+
+  .dashboard-elem-container {
+    gap: 1.5rem;
+  }
+
+  .dashboard-elem {
+    font-size: 14px;
+  }
+
+  .dashboard-elem-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dashboard-elem-container {
+    gap: 1.5rem;
+  }
+
+  .sidebar-active::before {
+    width: 0.5rem;
+    height: 3.5rem;
+  }
+
+  .sidebar-active span {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-elem-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+} */

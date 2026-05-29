@@ -1,0 +1,88 @@
+
+/* تعریف متغیرها برای مدیریت راحت‌تر */
+.accordion-item {
+  border-radius: 1rem;
+  background-color: #f8f9fa; /* رنگ زمینه ملایم */
+  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+/* افکت زمانی که آکاردئون باز است */
+.accordion-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-toggle {
+  padding: 20px 24px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.accordion_title {
+  font-family: var(--font-semibold); /* فرض بر این است که فونت ست شده */
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #1f2937;
+  transition: color 0.2s;
+}
+
+.accordion-toggle:hover .accordion_title {
+  color: var(--main-color); /* تغییر رنگ متن هنگام هاور */
+}
+
+/* بهبود انیمیشن فلش */
+.arrow {
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.arrow svg path {
+  stroke: #4b5563;
+  transition: stroke 0.3s;
+}
+
+.accordion-toggle:hover .arrow svg path {
+  stroke: var(--main-color);
+}
+
+/* پنل بازشونده با انیمیشن بسیار نرم */
+.accordion-panel {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.accordion-panel.open {
+  max-height: 200px; /* مقدار مناسب برای متن‌های سوال */
+  opacity: 1;
+}
+
+.acordion_faq {
+  padding: 0 24px 20px 24px;
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+
+/* ریسپانسیو */
+@media screen and (max-width: 576px) {
+  .accordion_title {
+    font-size: 0.95rem;
+  }
+}

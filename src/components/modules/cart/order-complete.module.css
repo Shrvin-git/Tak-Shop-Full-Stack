@@ -1,0 +1,131 @@
+.wrapper {
+  display: grid;
+  gap: 32px;
+  padding: 32px 20px;
+  background: var(--bg-body-color);
+}
+
+/* پیام موفقیت */
+.successBox {
+  text-align: center;
+  /* استفاده از رنگ موفقیت موجود در متغیرها */
+  background: linear-gradient(135deg, var(--ECFFEA), var(--bg-body-color));
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px var(--admin-shadow);
+  animation: fadeIn 0.5s ease;
+}
+
+.successIcon {
+  font-size: 50px;
+  color: var(--comment-like);
+  margin-bottom: 10px;
+}
+
+/* گرید دو ستونه */
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+.leftCol,
+.rightCol {
+  display: grid;
+  gap: 22px;
+}
+
+/* کارت */
+.card {
+  padding: 22px;
+  border-radius: 16px;
+  /* استفاده از رنگ بدنه و مرزهای تعریف شده */
+  background: var(--bg-body-color);
+  backdrop-filter: blur(9px);
+  border: 1px solid var(--border-color-dashboard);
+  box-shadow: 0 6px 14px var(--admin-shadow);
+  animation: slideUp 0.5s ease;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: var(--txt-black);
+}
+
+.cardHeader svg {
+  font-size: 22px;
+  color: var(--main-color);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--txt);
+}
+
+.addressBox p {
+  margin-top: 6px;
+  color: var(--txt-color2);
+  line-height: 1.7;
+}
+
+.successText {
+  color: var(--comment-like);
+}
+
+/* دکمه */
+.actions {
+  text-align: center;
+}
+
+.backBtn {
+  font-family: var(--primary-font);
+  background: var(--main-color);
+  color: var(--txt-color);
+  padding: 12px 30px;
+  border-radius: 14px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.backBtn:hover {
+  /* استفاده از بنفش تیره‌تر موجود در متغیرها برای هوور */
+  background: var(--s5D1689);
+  box-shadow: 0 8px 18px var(--admin-shadow);
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,375 @@
+.products-item {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  border-radius: 20px;
+  gap: 2.4rem;
+
+  /* background: #fff; */
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.25s ease;
+}
+
+.products-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* تصویر محصول */
+
+.products-item-right {
+  width: 20%;
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-item-right img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* اطلاعات */
+
+.products-item-left {
+  width: 72%;
+}
+
+.products-item-left h4 {
+  font-weight: 700;
+  color: var(--svg-color);
+  line-height: 1.8;
+  font-size: 1.6rem;
+}
+
+/* موجودی */
+
+.ssss {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.mogodi {
+  color: #ff4545 !important;
+  font-weight: 600;
+}
+
+/* footer */
+
+.product-cart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* قیمت */
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.products-org-price {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--svg-color);
+}
+
+.products-org-price span {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+
+.products-org-price p {
+  font-size: 1.3rem;
+  color: var(--txt-color2);
+}
+
+/* کنترل تعداد */
+
+.product-count {
+  width: 15rem;
+  height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 12px;
+
+
+  border: 1px solid var(--border-color);
+
+  padding: 0 14px;
+}
+
+.product-count svg {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product-count svg:hover {
+  transform: scale(1.15);
+}
+
+.product-count-number-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.product-count-number {
+  font-weight: 700;
+  font-size: 1.5rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* hover رنگ آیکن */
+
+.plus path {
+  transition: fill 0.2s;
+}
+
+.plus:hover path {
+  fill: var(--main-color);
+}
+
+/*! =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .products-item-left h4 {
+    font-size: 1.4rem;
+  }
+
+  .product-count-in {
+    font-size: 1.2rem;
+  }
+}
+
+/*! =========================================================================================== */
+@media screen and (max-width: 768px) {
+  .ssss {
+    row-gap: 0.3rem;
+  }
+
+  .ssss svg {
+    width: 1.5rem;
+  }
+
+  .product-count {
+    width: 14rem;
+    height: 4rem;
+  }
+
+  .products-org-price span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .product-cart-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+
+  .product-count-number-wrapper {
+    gap: 15px;
+  }
+
+  .products-item-right {
+    width: 35%;
+  }
+
+  .products-item-left {
+    width: 65%;
+  }
+}
+
+/*! =========================================================================================== */
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+  .products-item {
+    width: 75rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+  .products-item {
+    width: 62rem;
+  }
+
+  .payment_procedures {
+    gap: 6rem;
+  }
+
+  .svg-cart-wrapper::after {
+    width: 7rem;
+    left: -80px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .products-item-left h4 {
+    font-size: 1.4rem;
+  }
+
+  .product-count-in {
+    font-size: 1.2rem;
+  }
+
+  .cart-wrapper {
+    flex-direction: column;
+  }
+
+  .products-item,
+  .cart-left {
+    width: 100%;
+  }
+
+  .svg-cart-wrapper {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .payment_procedures_levels {
+    height: 12.5rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -90px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+  .ssss {
+    row-gap: 0.3rem;
+  }
+
+  .ssss svg {
+    width: 1.5rem;
+  }
+
+  .product-count {
+    width: 14rem;
+    height: 4rem;
+  }
+
+  .products-org-price span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .product-cart-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+
+  .product-count-number-wrapper {
+    gap: 15px;
+  }
+
+  .products-item-right {
+    width: 35%;
+  }
+
+  .products-item-left {
+    width: 65%;
+  }
+
+  .products-item,
+  .cart-left {
+    align-items: flex-start;
+  }
+
+  .best-sell-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .orginal_price {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  #sss {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .payment_procedures_levels div h4 {
+    font-size: 1rem;
+  }
+
+  .payment_procedures {
+    gap: 0rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -40px;
+    width: 3rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 430px) {
+  .svg-cart-wrapper {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -30px;
+    width: 2rem;
+  }
+
+  .first-level {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: bolder;
+  }
+}

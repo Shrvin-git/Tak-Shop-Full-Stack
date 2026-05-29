@@ -1,0 +1,120 @@
+.product-comments {
+  width: 100%;
+}
+
+.comment-form__row input,
+.comment-form__textarea {
+  background-color: var(--profile);
+  font-family: "yekan";
+}
+
+.comment-form-card {
+  background: var(--comment-box-wrapper);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.comment-form-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.comment-form__row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-form__input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--border-color-dashboard);
+  border-radius: 8px;
+  padding: 0 1rem;
+  outline: none;
+}
+
+.comment-form__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.comment-form__select {
+  height: 38px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0 0.6rem;
+}
+
+.comment-form__textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--border-color-dashboard);
+  border-radius: 8px;
+  padding: 1rem;
+  resize: none;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.comment-form__btn {
+  background: #831fc1;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: yekan;
+}
+
+.comment-form__btn:hover {
+  opacity: 0.9;
+}
+
+/* --- امتیازدهی ستاره‌ای --- */
+
+.rate {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.rate p {
+  position: relative;
+  bottom: 3px;
+}
+
+.rate-stars {
+  display: flex;
+  gap: 4px;
+  padding-top: 0.2rem;
+  direction: ltr;
+}
+
+/* اندازه‌ی آیکون‌های ستاره */
+.rate-stars svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+/* ستاره‌های پر (فعال) */
+.star-active {
+  color: #ffb400; /* زرد */
+}
+
+/* ستاره‌های خاموش (غیرفعال) */
+.star-inactive {
+  color: #ccc; /* خاکستری */
+}
+
+/* هاور: فقط خود ستاره کمی پررنگ‌تر شود (اختیاری) */
+.rate-stars svg:hover {
+  filter: brightness(1.1);
+}

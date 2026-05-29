@@ -1,0 +1,70 @@
+@import "fonts.css";
+
+/* ================ Start Default ================ */
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "yekan";
+  color: var(--txt-color3);
+  background-color: var(--bg-body-color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+button{
+  font-family: yekan;
+}
+
+/* ================ Finish Default ================ */
+
+.swal2-popup {
+  background-color: var(--bg-body-color);
+}
+
+.swal2-title {
+  font-size: 1.8rem;
+  color: var(--txt-color3);
+}
+
+.swal-popup {
+  font-size: 18px;
+  padding: 2rem;
+}
+
+.swal-confirm-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: yekan;
+}
+
+.swal-cancel-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: yekan;
+}
+
+.swal-confirm-btn {
+  background-color: var(--main-color);
+}

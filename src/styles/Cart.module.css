@@ -1,0 +1,265 @@
+/* Cart.module.css */
+
+/* ───── cart-left ───── */
+
+.main {
+  margin-top: 10rem;
+  padding-top: 3rem;
+}
+
+.cart-wrapper {
+  margin-top: 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cart-left {
+  width: 34%;
+  height: 36rem;
+  border-width: 2px;
+  border-radius: 16px;
+  gap: 24px;
+  padding: 24px;
+  border: 2px solid #cccccc;
+}
+
+/* ───── cart-left-item ───── */
+.cart-left-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--c737373);
+  margin-bottom: 2.4rem;
+}
+
+.cart-left-item div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ───── active ───── */
+.active {
+  color: #93c5b7;
+}
+
+/* ───── sup-cart-product-price ───── */
+.sup-cart-product-price {
+  border-top: 3px black dashed;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--c737373);
+  margin-bottom: 2.4rem;
+}
+
+.sup-cart-product-price span {
+  color: var(--links-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sup-cart-product-price div span {
+  font-size: 16px !important;
+}
+
+.sup-cart-product-price div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sup-cart-product-price div p {
+  font-size: 16px !important;
+}
+
+/* ───── confirm ───── */
+.confirm {
+  width: 100%;
+  height: 5rem;
+  font-family: var(--yekan);
+  background-color: var(--main-color);
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.confirm:hover {
+  box-shadow: 0 0 1rem var(--box-shadow);
+}
+
+/* ? Media Queries ================================================================ */
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
+  .products-item {
+    width: 75rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+  .products-item {
+    width: 62rem;
+  }
+
+  .payment_procedures {
+    gap: 6rem;
+  }
+
+  .svg-cart-wrapper::after {
+    width: 7rem;
+    left: -80px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .products-item-left h4 {
+    font-size: 1.4rem;
+  }
+
+  .product-count-in {
+    font-size: 1.2rem;
+  }
+
+  .cart-wrapper {
+    flex-direction: column;
+  }
+
+  .products-item,
+  .cart-left {
+    width: 100%;
+  }
+
+  .svg-cart-wrapper {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .payment_procedures_levels {
+    height: 12.5rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -90px;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 768px) {
+  .ssss {
+    row-gap: 0.3rem;
+  }
+
+  .ssss svg {
+    width: 1.5rem;
+  }
+
+  .product-count {
+    width: 14rem;
+    height: 4rem;
+  }
+
+  .products-org-price span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .product-cart-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+
+  .product-count-number-wrapper {
+    gap: 15px;
+  }
+
+  .products-item-right {
+    width: 35%;
+  }
+
+  .products-item-left {
+    width: 65%;
+  }
+
+  .products-item,
+  .cart-left {
+    align-items: flex-start;
+  }
+
+  .best-sell-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .orginal_price {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  #sss {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .payment_procedures_levels div h4 {
+    font-size: 1rem;
+  }
+
+  .payment_procedures {
+    gap: 0rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -40px;
+    width: 3rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 430px) {
+  .svg-cart-wrapper {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .svg-cart-wrapper svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .svg-cart-wrapper::after {
+    left: -30px;
+    width: 2rem;
+  }
+
+  .first-level {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: bolder;
+  }
+}

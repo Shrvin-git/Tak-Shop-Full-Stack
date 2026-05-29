@@ -1,0 +1,28 @@
+/* ? ============================ Blog New Started =============================== */
+
+.blog-category-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  background-color: var(--border-profile);
+  border-radius: 2.4rem;
+  width: 28%;
+  margin: 0 auto 4rem auto;
+}
+
+.blog-category-items {
+  padding: 0.9rem 2.6rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-category--active {
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+  color: #eaeaea;
+}
+
+/* ? ============================ Blog New Finishd =============================== */

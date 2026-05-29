@@ -1,0 +1,134 @@
+.form_sign_up {
+}
+
+.website_logo {
+  font-weight: 600;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.signup-login {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.signup-login a {
+  color: var(--main-color);
+  font-family: yekan;
+}
+
+.signUp {
+}
+
+.8rem;
+  font-family: yekan;
+  color: rgba(198, 152, 226, 1);
+  display: flex;
+  justify-content: end;
+}
+
+.motto-site {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+}
+
+.motto-site input {
+  width: 2.4rem;
+  height: 2.4rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sent_info {
+  width: 100%;
+  height: 5.5rem;
+  background-color: var(--main-color);
+  border-radius: 0.8rem;
+  color: var(--txt-color);
+  font-size: 1.8rem;
+  font-family: yekan;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.website_logo,
+.signup-login,
+.form-desc,
+#phone_number,
+.motto-site,
+.sent_info {
+  margin-bottom: 1.5rem;
+}
+
+.motto-site {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: var(--txt-black);
+}
+
+.motto-site input[type="checkbox"] {
+  accent-color: var(--main-color);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.sent_info {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-family: yekan;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sent_info:hover {
+  background-color: #6c14a8;
+}
+
+.5rem;
+  }
+
+  .signup-login {
+    font-size: 1.6rem;
+  }
+
+.website_logo {
+    font-size: 2.4rem;
+  }
+
+.website_logo img {
+    width: 3rem;
+  }
+
+.sent_info {
+    font-size: 1.6rem;
+  }
+
+.motto-site {
+    font-size: 12px;
+  }
+

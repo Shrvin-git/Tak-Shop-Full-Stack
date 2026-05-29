@@ -1,0 +1,170 @@
+:root {
+  --processing: #f9c349;
+  --delivering: #3ac7d4;
+  --delivered: #4cd964;
+  --unpaid: #ff4f6d;
+
+  /* switch pill background */
+  --admin-switch-bg: rgba(255, 255, 255, 0.65);
+  --admin-switch-border: rgba(0, 0, 0, 0.08);
+
+  /* text color */
+  --admin-text: #1f1f1f;
+
+  /* gradients admin */
+  --admin-grad-1: #ff4c4c;
+  --admin-grad-2: #ff9a3c;
+
+  /* gradients user */
+  --user-grad-1: #3c82ff;
+  --user-grad-2: #7a3cff;
+
+  /* shadow */
+  --admin-shadow: rgba(0, 0, 0, 0.12);
+  --primary-font: "yekan";
+  --txt-color: #fff;
+  --txt-color2: #737373;
+  --txt-color3: #131313;
+  --main-color: #831fc1;
+  --links-color: #2a2a2a;
+  --txt-black: #000;
+  --bg-color: #f0f0f0;
+  --bg-Body: #fff;
+  --accordion-bg-color: #f5f5f5;
+  --megamenu-color: #131313;
+  --bg-color-violet: #d9baec;
+  --border-color: #cccccc;
+  --border-color2: #787878;
+  --timer-color: #5d1689;
+  --accordion-open-bg-color: #e1e1e1;
+  --input-form: #f9f9f9;
+  --input-form-v1: #f9f9f9;
+  --label: #831fc1;
+  --svg-color: #2a2a2a;
+  --bg-body-color: #ffffff;
+  --bg-accordion: #f5f5f547;
+  --shadow-accordion: #d6d6d6;
+  --button-color: #831fc1;
+  --c737373: #737373;
+  --s292929: #292929;
+  --comment-box-like: #e4ffda;
+  --comment-box-dis: #ffdada;
+  --comment-like: #39ae3d;
+  --comment-dis: #953232;
+  --comment-box-wrapper: #fbfbfb;
+  --border-profile: #f8f8f8;
+  --s737373: #737373;
+  --label-order: #727272;
+  --levelC698E2: #c698e2;
+  --line831FC1: #831fc1;
+  --slider-btn: #f3e9f9;
+  --box-shadow: #831fc1;
+  --txt: #505050;
+  --bg-color-dashboard: #fff;
+  --border-color-dashboard: #eaeaea;
+  --bg-color-dashboard2: #f0f0f0;
+  --ECFFEA: #ecffea;
+  --380F0F: #ffe6e6;
+  --FFF2D5: #fff2d5;
+  --FBFBFB: #fbfbfb;
+  --s5D1689: #ac69d5;
+  --table-hover: #f9f9f9;
+  --border-profile2: #f8f8f8;
+  --profile: #d9d9d9;
+  --box-shadow: rgba(38, 38, 38, 0.529);
+  --table-tr-accept: #61ff3a7e;
+  --table-tr-reject: #ff3a3a7e;
+  --cart-bg-color: #e2ebfc;
+  --cart-bg-color2: #f5eaf6;
+
+  --bg-color-v5: #bdd1ff;
+  --bg-color-v6: #f2c7ff;
+
+  --orders-bg-color1: #fcfcfc;
+  --orders-bg-color2: #dae6f2;
+
+  --e3ffffbd: #e3ffffbd;
+
+  --loading-bg-color: #ffffff40;
+  --loading-blur-color: #ffffff2e;
+}
+
+.dark-mode {
+  --loading-bg-color: #14141440;
+  --loading-blur-color: #ffffff14;
+
+  --e3ffffbd: #00ffff2b;
+  --orders-bg-color1: #2d3748;
+  --orders-bg-color2: #1a202c;
+  --bg-color-v5: #6695ff;
+  --bg-color-v6: #d138ff;
+
+  --processing: #f7b733;
+  --delivering: #2bb7c1;
+  --delivered: #3fbf57;
+  --unpaid: #ff3b5c;
+
+  --admin-switch-bg: rgba(30, 30, 30, 0.55);
+  --admin-switch-border: rgba(255, 255, 255, 0.12);
+  --admin-text: #f2f2f2;
+  --admin-grad-1: #ff6b6b;
+  --admin-grad-2: #ffb36b;
+  --user-grad-1: #5c9dff;
+  --user-grad-2: #9a6cff;
+  --admin-shadow: rgba(0, 0, 0, 0.5);
+  --cart-bg-color: #d000ff36;
+  --cart-bg-color2: #0b0606;
+  --table-tr-reject: #9d000057;
+  --table-tr-accept: #1f9d0057;
+  --primary-font: "yekan";
+  --txt-color: #fff;
+  --border-color: #68686884;
+  --accordion-bg-color: #f5f5f5;
+  --txt-color2: #737373;
+  --box-shadow: rgba(255, 255, 255, 0.529);
+  --profile: #292929;
+  --table-hover: #373737;
+  --s5D1689: #5d1689;
+  --FBFBFB: #232323;
+  --ECFFEA: #0e2c0c;
+  --FFF2D5: #322710;
+  --380F0F: #380f0f;
+  --bg-color-dashboard2: #171717;
+  --border-color-dashboard: #292929;
+  --bg-color-dashboard: #1d1d1d;
+  --txt: #a3a3a3;
+  --box-shadow: #bbbbbb91;
+  --slider-btn: #121212;
+  --line831FC1: #831fc1;
+  --levelC698E2: #370d51;
+  --label-order: #424242;
+  --s737373: #e1e1e1;
+  --border-profile: #1d1d1d;
+  --comment-box-like: #0d2305;
+  --comment-box-dis: #2d0505;
+  --comment-like: #19a01e;
+  --comment-dis: #c32929;
+  --comment-box-wrapper: #1d1d1d;
+  --s292929: #eaeaea;
+  --c737373: #9e9e9e;
+  --border-color2: #cccccc;
+  --bg-accordion: #6b6b6b66;
+  --shadow-accordion: #831fc1;
+  --bg-body-color: #171717;
+  --label: #ac69d5;
+  --input-form: #232323;
+  --input-form-v1: #1a1a1a;
+  --megamenu-color: #f5f5f5;
+  --svg-color: #e1e1e1;
+  --bg-label-color: #9633d3;
+  --bg-color-violet: #370d51;
+  --accordion-open-bg-color: #232323;
+  --timer-color: #c698e2;
+  --links-color: #f5f5f5;
+  /* --main-color: #48116A; */
+  --main-color: #831fc1;
+  --txt-black: #f5f5f5;
+  --bg-color: #1d1d1d;
+  --txt-color3: #f5f5f5;
+  --bg-Body: #171717;
+}

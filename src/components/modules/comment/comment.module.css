@@ -1,0 +1,142 @@
+.review-box {
+  background-color: var(--comment-box-wrapper);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: auto;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.reviewer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.badge {
+  background-color: var(--bg-color-violet);
+  color: #a347e3;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  width: fit-content;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 14px;
+  color: #666;
+}
+
+.review-date {
+  color: var(--svg-color);
+}
+
+.review-rating {
+  color: #efc003;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.review-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--svg-color);
+}
+
+.review-content strong {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+  display: block;
+}
+
+.review-content p {
+  font-size: 14px;
+}
+
+.review-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: end;
+}
+
+.action {
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: end;
+  gap: 6px;
+  cursor: pointer;
+}
+.action svg {
+}
+.positive {
+  background-color: var(--comment-box-like);
+  color: var(--comment-like);
+}
+
+.negative {
+  background-color: var(--comment-box-dis);
+  color: var(--comment-dis);
+}
+
+/* دکمه لایک فعال (متمایز با رنگ آبی ملایم و بوردر) */
+.positive.active {
+  background-color: rgba(72, 246, 59, 0.178) !important; /* پس‌زمینه آبی بسیار ملایم */
+  color: #25eb35 !important;                            /* رنگ آبی اصلی برای متن و آیکون */
+  border: 1px solid #25eb35 !important;                 /* دورخط آبی */
+  transform: scale(1.05);                              /* کمی بزرگ‌تر برای تمایز بصری */
+}
+
+/* دکمه دیس‌لایک فعال (متمایز با رنگ قرمز ملایم و بوردر) */
+.negative.active {
+  background-color: rgba(239, 68, 68, 0.178) !important;  /* پس‌زمینه قرمز بسیار ملایم */
+  color: #dc2626 !important;                            /* رنگ قرمز اصلی برای متن و آیکون */
+  border: 1px solid #ef4444 !important;                 /* دورخط قرمز */
+  transform: scale(1.05);                              /* کمی بزرگ‌تر برای تمایز بصری */
+}

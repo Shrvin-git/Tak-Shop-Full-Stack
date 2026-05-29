@@ -1,0 +1,15 @@
+.brand_img {
+  width: 20rem;
+}
+
+.brand_img img {
+  width: 100%;
+  height: 10.5rem;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  .brand_img {
+    width: 8rem;
+  }
+}

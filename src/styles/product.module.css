@@ -1,0 +1,12 @@
+.main {
+    margin-top: 10rem;
+    padding-top: 6rem;
+}
+
+
+
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

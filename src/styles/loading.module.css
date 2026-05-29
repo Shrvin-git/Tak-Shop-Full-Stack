@@ -1,0 +1,147 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--loading-bg-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--loading-blur-color);
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+/* حلقه بیرونی - چرخش ساعتگرد */
+.outer {
+  width: 100%;
+  height: 100%;
+  border-top-color: var(--main-color);
+  border-bottom-color: var(--bg-color-violet);
+  animation: spin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+/* حلقه میانی - چرخش پادساعتگرد */
+.inner {
+  width: 70%;
+  height: 70%;
+  border-left-color: var(--main-color);
+  border-right-color: var(--timer-color); /* یا یک رنگ مکمل */
+  opacity: 0.7;
+  animation: spin 1.5s linear infinite reverse;
+}
+
+/* دایره مرکزی - حالت تپنده */
+.center {
+  width: 15px;
+  height: 15px;
+  background: var(--main-color);
+  border: none;
+  box-shadow: 0 0 20px var(--main-color);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  font-family: var(--primary-font);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--main-color);
+  letter-spacing: 4px;
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    var(--main-color),
+    #ff416c,
+    var(--main-color)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+/* نوار پیشرفت مینیاتوری */
+.progressBar {
+  width: 120px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: var(--main-color);
+  border-radius: 10px;
+  animation: loadingBar 1.5s ease-in-out infinite;
+}
+
+/* انیمیشن‌ها */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+    box-shadow: 0 0 35px var(--main-color);
+  }
+}
+
+@keyframes loadingBar {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200%;
+  }
+}
