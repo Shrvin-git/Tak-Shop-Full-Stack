@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import styles from "./MobileMenu.module.css";
 
-
 export default function MobileMenu() {
   return (
     <div className="menu-mobile-bottom">
@@ -28,16 +27,16 @@ export default function MobileMenu() {
       </div>
 
       <div className="menu-mobile-items">
-        <Link href={"/profile"}>
+        {/* <Link href={"/p-user"}>
           <img src="./svgs/profile.svg" alt="" />
           <span>پروفایل</span>
-        </Link>
-        {/* <Link href={"sign-up.html"}>
+        </Link> */}
+        <Link href={"/login-register"}>
           <span>
             <img src="./svgs/user-edit.svg" alt="" />
           </span>
           ورود یا ثبت نام
-        </Link> */}
+        </Link>
       </div>
     </div>
   );
