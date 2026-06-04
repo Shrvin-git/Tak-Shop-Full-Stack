@@ -17,7 +17,7 @@ export default function ClientLayoutController({ children, user }) {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
 
   const hiddenPaths = [
     "/p-user",
