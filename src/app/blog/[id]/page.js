@@ -5,20 +5,9 @@ import UniversalSlider from "@/components/modules/UniversalSlider/UniversalSlide
 import SectionHeader from "@/components/modules/sections-header/SectionHeader";
 
 export default async function page() {
-  //   const [article, setArticle] = useState(null);
+ 
 
-  //   useEffect(() => {
-  //     const fetchArticles = async () => {
-  //       const res = await fetch("/api/article");
-  //       const data = await res.json();
-
-  //       setArticle(data.article);
-  //     };
-
-  //     fetchArticles();
-  //   }, []);
-
-  const res = await fetch("/api/article", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/article`, {
     cache: "no-store",
   });
 

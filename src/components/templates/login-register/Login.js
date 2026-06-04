@@ -33,7 +33,7 @@ function Login({ showRegisterForm }) {
     }
 
     try {
-      const res = await fetch("/api/auth/signin", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/product/api/auth/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

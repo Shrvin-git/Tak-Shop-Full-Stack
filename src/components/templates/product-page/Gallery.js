@@ -11,11 +11,14 @@ function Gallery({ product }) {
 
   // ارسال درخواست افزودن/حذف
   const addToWishList = async () => {
-    const res = await fetch("/api/wishlist", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ product: product._id }),
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/product/api/wishlist`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ product: product._id }),
+      },
+    );
 
     const result = await res.json();
 

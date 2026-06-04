@@ -6,7 +6,7 @@ import styles from "@/styles/category/category.module.css";
 export default async function Page({ params, searchParams }) {
   const { categorySlug } = params;
 
-  const res = await fetch("/api/product", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/product`, {
     cache: "no-store",
   });
 
