@@ -100,7 +100,7 @@ function Navbar({ user }) {
       : [];
   }
 
-  if (!userInfo) return null;
+  // if (!userInfo) return null;
 
   return (
     <div className="navbar">
