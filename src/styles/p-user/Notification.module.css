@@ -88,6 +88,25 @@
 .notif-category {
 }
 
+.popular-products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--380F0F);
+  color: red;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid red;
+}
+
 .notif-link {
   cursor: pointer;
   display: flex;

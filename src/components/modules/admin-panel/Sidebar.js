@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import styles from "./Sidebar.module.css";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoTicketOutline } from "react-icons/io5";
+import { showSwal } from "@/utils/helper";
+import Ticket from "../svgs/Ticket";
 
 function Sidebar() {
   const [user, setUser] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const userAuth = async () => {
@@ -15,10 +18,35 @@ function Sidebar() {
       const data = await res.json();
 
       setUser(data.user);
+      console.log(data.user);
     };
 
     userAuth();
   }, []);
+
+  const logOut = () => {
+    showSwal(
+      "خروج از حساب",
+      "مطمعنی میخوای ازحساب کاربریت خارج بشی",
+      "warning",
+      "آره",
+      async () => {
+        const res = await fetch("/api/auth/signout", { method: "POST" });
+
+        if (res.status === 201) {
+          showSwal("موفق", "با موفقیت خارج شدید.", "success", "باشه");
+          router.push("/login-register");
+        } else {
+          const data = await res.json();
+          showSwal("خطا", data.message || "مشکلی پیش اومد.", "error");
+        }
+      },
+      "لغو",
+      () => {
+        null;
+      },
+    );
+  };
 
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
@@ -59,7 +87,9 @@ function Sidebar() {
 
         <div className={styles["admin-profile"]}>
           <img src={user?.profileImage} alt="" />
-          <span className={styles["admin-name"]}>محمد همتی</span>
+          <span className={styles["admin-name"]}>
+            {user?.firstName} {user?.lastName}{" "}
+          </span>
         </div>
       </div>
       <div className={styles["sidebar-bottom"]}>
@@ -284,11 +314,11 @@ function Sidebar() {
             }
           >
             <div className={styles["dashboard-elem-icon"]}>
-            <IoTicketOutline />
+              <Ticket />
             </div>
             <span>تیکت ها</span>
           </Link>
-          <Link
+          {/* <Link
             href={"/p-admin/settings"}
             data-sec="settings"
             className={
@@ -319,8 +349,9 @@ function Sidebar() {
               </svg>
             </div>
             <span>تنظیمات</span>
-          </Link>
+          </Link> */}
           <div
+            onClick={logOut}
             className={styles["dashboard-elem"] + " " + styles["log-out-admin"]}
           >
             <div className={styles["dashboard-elem-icon"]}>

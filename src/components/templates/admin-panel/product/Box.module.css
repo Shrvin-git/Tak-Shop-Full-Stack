@@ -28,3 +28,8 @@
   color: var(--c737373);
   font-weight: 200;
 }
+
+.main-info-items-icon svg path {
+  fill: var(--txt-color3); /* اگر آیکون توپر است */
+  /* stroke: var(--txt-color3);  */
+}

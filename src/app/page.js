@@ -27,7 +27,10 @@ export default async function Home() {
   return (
     <>
       <Banner img={"/images/index/HeroSection.png"} />
-      <Category category={JSON.parse(JSON.stringify(allCategories))} />
+      <Category
+        data-aos="zoom-in"
+        category={JSON.parse(JSON.stringify(allCategories))}
+      />
       <Offer product={JSON.parse(JSON.stringify(allProducts))} />
       <BestSellingProducts product={JSON.parse(JSON.stringify(allProducts))} />
       <PopularBrands />
@@ -38,5 +41,3 @@ export default async function Home() {
     </>
   );
 }
-
-

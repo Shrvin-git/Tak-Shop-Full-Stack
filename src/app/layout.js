@@ -5,6 +5,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import { authUser } from "@/utils/auth-server";
 import UserModel from "@/models/User";
 import connectToDB from "../../configs/db";
+import AOSInit from "@/utils/Aos";
 
 export default async function RootLayout({ children }) {
   await connectToDB();
@@ -20,6 +21,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body>
+        <AOSInit />
         <ThemeProvider>
           <ClientLayoutController user={JSON.parse(JSON.stringify(findUser))}>
             {children}

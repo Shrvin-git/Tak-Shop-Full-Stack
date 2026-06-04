@@ -15,7 +15,7 @@ function Offer({ product }) {
     .slice(0, 6);
 
   return (
-    <section className="discount">
+    <section  className="discount">
       <div className="container">
         <div className="discount_wrapper">
           <div className="discount_right">

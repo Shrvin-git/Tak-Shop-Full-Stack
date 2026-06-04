@@ -3,6 +3,9 @@
 import { useState } from "react";
 import styles from "./AccordionBox.module.css";
 
+
+// 
+// background: var(--input-form-v1);
 function AccordionBox({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 

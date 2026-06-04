@@ -6,7 +6,7 @@ import UniversalSlider from "@/components/modules/UniversalSlider/UniversalSlide
 
 function Category({ category }) {
   return (
-    <div className="container">
+    <div data-aos="fade-up" className="container">
       <SectionHeader
         title={"دسته بندی محصولات ما"}
         desc={
