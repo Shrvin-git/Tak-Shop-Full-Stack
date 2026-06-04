@@ -17,7 +17,9 @@ function Banner({img}) {
   const paginationRef = useRef(null);
 
   return (
-    <div className="banner-section">
+    <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" className="banner-section">
       <div className="container">
         <div className="hero-section-slider">
           <Swiper
