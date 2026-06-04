@@ -70,7 +70,7 @@ function SideBar() {
         <div className={styles["profile-sidebar-top"]}>
           <div className={styles["avatar-wrapper"]}>
             <div className={styles["profile-sidebar_header-img"]}>
-              <img src={user.profileImage} alt="" />
+              <img src={user?.profileImage} alt="" />
             </div>
             <input
               type="file"

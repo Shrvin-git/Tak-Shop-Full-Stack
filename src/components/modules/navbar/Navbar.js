@@ -100,7 +100,7 @@ function Navbar({ user }) {
       : [];
   }
 
-  // if (!userInfo) return null;
+  if (!userInfo) return null;
 
   return (
     <div className="navbar">
@@ -318,7 +318,7 @@ function Navbar({ user }) {
                   </div>
                 ) : (
                   <Link href="/p-user" className="user-icon">
-                    <img className="pop" src={userInfo.profileImage} alt="" />
+                    <img className="pop" src={userInfo?.profileImage} alt="" />
                   </Link>
                 )
               ) : (

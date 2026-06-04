@@ -104,7 +104,7 @@ function Comment({
       <div className={styles["review-header"]}>
         <div className={styles["reviewer-info"]}>
           <div className={styles["avatar"]}>
-            <img src={user.profileImage} alt="" />
+            <img src={user?.profileImage} alt="" />
           </div>
           <div className={styles["reviewer-details"]}>
             <span className={styles["reviewer-name"]}>
