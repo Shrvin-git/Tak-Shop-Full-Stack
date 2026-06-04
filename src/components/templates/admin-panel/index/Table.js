@@ -57,7 +57,7 @@ function Table({ orders }) {
                     {order.items.map((item) => (
                       <div key={item._id} className={styles["product-item"]}>
                         <Link
-                          href={`http://localhost:3000/products/${item.product.category.slug}/${item.product._id}`}
+                          href={`/products/${item.product.category.slug}/${item.product._id}`}
                         >
                           {item.product.title} ({item.count} عدد)
                         </Link>
@@ -70,7 +70,7 @@ function Table({ orders }) {
                 order.items.map((item) => (
                   <div key={item._id} className={styles["product-item"]}>
                     <Link
-                      href={`http://localhost:3000/products/${item.product.category.slug}/${item.product._id}`}
+                      href={`/products/${item.product.category.slug}/${item.product._id}`}
                     >
                       {item.product.title} ({item.count} عدد)
                     </Link>

@@ -4,7 +4,7 @@ import styles from "./CategoryCpuCard.module.css";
 function CategoryCpuCard({ item }) {
   return (
     <Link
-      href={`http://localhost:3000/products/laptops?cpuModel=${item.name}`}
+      href={`/products/laptops?cpuModel=${item.name}`}
       className={styles["category-by-cpu__items"]}
     >
       <div>

@@ -80,12 +80,12 @@ export default function LaptopCategory() {
 
     async function loadData() {
       try {
-        const articleRes = await fetch("http://localhost:3000/api/article");
+        const articleRes = await fetch("/api/article");
         const articleData = await articleRes.json();
         setArticles(articleData.articles || []);
 
         const productRes = await fetch(
-          `http://localhost:3000/api/product?category=${LAPTOP_CATEGORY_ID}`,
+          `/api/product?category=${LAPTOP_CATEGORY_ID}`,
         );
         const productData = await productRes.json();
 

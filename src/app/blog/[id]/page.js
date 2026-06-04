@@ -18,7 +18,7 @@ export default async function page() {
   //     fetchArticles();
   //   }, []);
 
-  const res = await fetch("http://localhost:3000/api/article", {
+  const res = await fetch("/api/article", {
     cache: "no-store",
   });
 
