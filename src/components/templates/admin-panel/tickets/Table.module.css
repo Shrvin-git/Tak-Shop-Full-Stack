@@ -1,0 +1,185 @@
+/* ========== Base Table ========== */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.product-table-wrapper {
+}
+
+.product-table-wrapper table tr {
+  border-bottom: 1px solid var(--border-color-dashboard);
+}
+
+.product-table-wrapper tbody td:last-child {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.product-table-wrapper table {
+  width: 100%;
+}
+.product-table-wrapper thead th {
+  background-color: transparent;
+  color: var(--txt-color3);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+  padding: 12px 10px;
+}
+
+.product-table-wrapper tbody td {
+  padding: 10px;
+  color: var(--txt-color3);
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+  height: 5rem;
+}
+
+.admin-table__head th {
+  background: transparent;
+  color: var(--txt-color3);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--border-color-dashboard);
+}
+
+.admin-table__row {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color-dashboard);
+}
+
+.product-image {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #ddd;
+}
+
+.product-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.admin-table__cell {
+  padding: 10px;
+  color: var(--txt-color3);
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+  height: 5rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status.active {
+  background-color: var(--ECFFEA);
+  color: #12de00;
+}
+
+.status.outofstock {
+  background-color: var(--FFF2D5);
+  color: #ff0000;
+}
+
+.status.inactive {
+  background-color: var(--380F0F);
+  color: #ffbf00;
+}
+
+/* ========== Specific Columns (Modifiers) ========== */
+.admin-table__cell--id {
+  width: 40px;
+}
+
+.admin-table__cell--user {
+  width: 160px;
+}
+
+.admin-table__cell--date {
+  width: 150px;
+}
+
+.admin-table__cell--product {
+  width: auto;
+}
+
+.admin-table__cell--status {
+  width: 150px;
+}
+
+.admin-table__cell--price {
+  white-space: nowrap;
+  width: 120px;
+}
+
+/* ========== Status ========== */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 2.4rem;
+  font-size: 12px;
+}
+
+.product-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--txt-color3);
+}
+
+.status img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.status--processing {
+  background-color: var(--FFF2D5);
+  color: #ffae00;
+}
+
+.status--done {
+  background-color: var(--ECFFEA);
+  color: #12de00;
+}
+
+.status--failed {
+  background-color: var(--380F0F);
+  color: #ff0000;
+}
+
+
+.closed{
+  background-color: var(--380F0F);
+  color: #ff0000;
+}
+
+/* ========== Utilities ========== */
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.delete-icon,
+.edit-icon {
+  cursor: pointer ;
+}

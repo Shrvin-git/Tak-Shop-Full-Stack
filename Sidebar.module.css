@@ -1,123 +1,39 @@
-.user-order {
+.tickets-page {
   /* your styles */
 }
 
-.user-panel {
+.tickets-header {
   /* your styles */
 }
 
-.user-panel--active {
+.new-ticket-btn {
   /* your styles */
 }
 
-.user-panel-header {
+.tickets-wrapper {
   /* your styles */
 }
 
-.user-panel-header-right {
+.ticket-card {
   /* your styles */
 }
 
-.user-panel-header-title {
+.ticket-content {
   /* your styles */
 }
 
-.user-panel-header-desc {
+.ticket-title {
   /* your styles */
 }
 
-.flash-back {
+.ticket-meta {
   /* your styles */
 }
 
-.user-otder-wrapper {
+.ticket-actions {
   /* your styles */
 }
 
-.user-otder-header {
-  /* your styles */
-}
-
-.user-otder-header-top {
-  /* your styles */
-}
-
-.user-otder-header-bottom {
-  /* your styles */
-}
-
-.order-modes {
-  /* your styles */
-}
-
-.current {
-  /* your styles */
-}
-
-.order-modes--active {
-  /* your styles */
-}
-
-.order-moodes-counter {
-  /* your styles */
-}
-
-.active {
-  /* your styles */
-}
-
-.delivered {
-  /* your styles */
-}
-
-.canceled {
-  /* your styles */
-}
-
-.salmon {
-  /* your styles */
-}
-
-.user-otder-main {
-  /* your styles */
-}
-
-.user-otder-main-header {
-  /* your styles */
-}
-
-.user-order-info-container {
-  /* your styles */
-}
-
-.user-order-info-items {
-  /* your styles */
-}
-
-.user-order-level {
-  /* your styles */
-}
-
-.products-deliverd {
-  /* your styles */
-}
-
-.user-order-level-line {
-  /* your styles */
-}
-
-.user-order-level-line-top {
-  /* your styles */
-}
-
-.user-order-level-line-bottom {
-  /* your styles */
-}
-
-.all-orders-images {
-  /* your styles */
-}
-
-.products-image {
+.danger {
   /* your styles */
 }

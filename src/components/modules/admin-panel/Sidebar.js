@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Sidebar.module.css";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IoTicketOutline } from "react-icons/io5";
 
 function Sidebar() {
   const [user, setUser] = useState(null);
@@ -243,7 +244,7 @@ function Sidebar() {
             className={
               styles["dashboard-elem"] +
               " " +
-              (lastSegment === "admins" ? styles["sidebar-active"] : "")
+              (lastSegment === "articles" ? styles["sidebar-active"] : "")
             }
           >
             <div className={styles["dashboard-elem-icon"]}>
@@ -273,6 +274,19 @@ function Sidebar() {
               </svg>
             </div>
             <span>مقالات</span>
+          </Link>
+          <Link
+            href={`/p-admin/tickets`}
+            className={
+              styles["dashboard-elem"] +
+              " " +
+              (lastSegment === "tickets" ? styles["sidebar-active"] : "")
+            }
+          >
+            <div className={styles["dashboard-elem-icon"]}>
+            <IoTicketOutline />
+            </div>
+            <span>تیکت ها</span>
           </Link>
           <Link
             href={"/p-admin/settings"}

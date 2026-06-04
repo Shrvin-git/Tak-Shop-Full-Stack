@@ -6,7 +6,7 @@
 .profile-sidebar {
   background-color: var(--bg-color);
   padding: 3.3rem 2.5rem;
-  width: 35rem;
+  width: 32rem;
   border-radius: 1.6rem;
   align-self: flex-start;
 }
@@ -44,15 +44,15 @@
 .profile-sidebar_header-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* بهترین کیفیت داخل دایره */
+  object-fit: cover; /* بهترین کیفیت داخل دایره */
   object-position: center; /* عکس دقیقاً از مرکز کراپ می‌شود */
-  image-rendering: auto;   /* جلوگیری از افت کیفیت */
+  image-rendering: auto; /* جلوگیری از افت کیفیت */
 }
 
 .profile-sidebar-items-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 .change_profile {

@@ -70,13 +70,12 @@ const schema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // اضافه شدن خودکار createdAt و updatedAt
-    toJSON: { virtuals: true }, // برای استفاده از virtualها
+    timestamps: true, 
+    toJSON: { virtuals: true }, 
     toObject: { virtuals: true },
   },
 );
 
-// برای ارتباط معکوس کامنت‌ها (اگر مدل Comment دارید)
 schema.virtual("comments", {
   ref: "Comment",
   localField: "_id",

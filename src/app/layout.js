@@ -4,12 +4,17 @@ import ClientLayoutController from "@/components/layouts/ClientLayoutContoroller
 import ThemeProvider from "@/providers/ThemeProvider";
 import { authUser } from "@/utils/auth-server";
 import UserModel from "@/models/User";
+import connectToDB from "../../configs/db";
 
 export default async function RootLayout({ children }) {
+  await connectToDB();
+
   const user = await authUser();
+
   let findUser = null;
+
   if (user) {
-    findUser = await UserModel.findById({ _id: user._id });
+    findUser = await UserModel.findById(user._id).lean();
   }
 
   return (

@@ -11,7 +11,6 @@ import Box from "@/components/templates/admin-panel/product/Box";
 import Table from "@/components/templates/admin-panel/product/Table";
 import styles from "@/styles/p-admin/product.module.css";
 import { useEffect, useState, useMemo } from "react";
-// import { Pagination } from "swiper/modules";
 
 function Page() {
   const [products, setProducts] = useState([]);

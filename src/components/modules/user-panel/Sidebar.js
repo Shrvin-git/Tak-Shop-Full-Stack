@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { ProfileImageContext } from "@/context/ProfileImageContext";
 import { usePathname, useRouter } from "next/navigation";
 import ChangeProfileIcon from "../svgs/ChangeProfileIcon";
+import { IoTicketOutline } from "react-icons/io5";
 
 function SideBar() {
   const { setSelectedImage } = useContext(ProfileImageContext);
@@ -172,7 +173,7 @@ function SideBar() {
             ></path>
           </svg>
 
-          <span> کالاهای محبوب شما</span>
+          <span> کالاهای محبوب </span>
         </Link>
         <Link
           href={"/p-user/comments"}
@@ -199,7 +200,7 @@ function SideBar() {
             ></path>
           </svg>
 
-          <span>کامنت های شما</span>
+          <span>کامنت ها </span>
         </Link>
         <Link
           href={"/p-user/orders"}
@@ -225,7 +226,20 @@ function SideBar() {
             ></path>
           </svg>
 
-          <span>سفارش های شما</span>
+          <span>سفارش ها </span>
+        </Link>
+        <Link
+          href={"/p-user/tickets"}
+          data-section="user-ticket"
+          className={
+            styles["profile-sidebar-item"] +
+            " " +
+            (lastSegment === "tickets" ? styles["item-active"] : "")
+          }
+        >
+          <IoTicketOutline />
+
+          <span>تیکت ها </span>
         </Link>
         <Link
           href={"/p-user/gift-cards"}
