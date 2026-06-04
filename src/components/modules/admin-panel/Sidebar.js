@@ -59,7 +59,7 @@ function Sidebar() {
 
         <div className={styles["admin-profile"]}>
           <img src={user?.profileImage} alt="" />
-          <span className={styles["admin-name"]}>شروین داوودی</span>
+          <span className={styles["admin-name"]}>محمد همتی</span>
         </div>
       </div>
       <div className={styles["sidebar-bottom"]}>
