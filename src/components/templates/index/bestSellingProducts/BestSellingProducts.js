@@ -16,7 +16,7 @@ function BestSellingProducts({ product }) {
     .slice(0, 6);
 
   return (
-    <div className="best_selling_products">
+    <div data-aos="fade-left" className="best_selling_products">
       <div className="container">
         <SectionHeader
           title="محصولات با بیشترین تخفیف"

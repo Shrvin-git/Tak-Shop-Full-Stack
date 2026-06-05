@@ -5,7 +5,7 @@ import styles from "./PopularBrands.module.css";
 
 function PopularBrands() {
   return (
-    <div className="brands">
+    <div  className="brands">
       <div className="container">
         <SectionHeader
           title={"برند های محبوب"}

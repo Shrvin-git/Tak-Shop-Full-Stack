@@ -5,7 +5,11 @@ import UniversalSlider from "@/components/modules/UniversalSlider/UniversalSlide
 
 function BlogPosts({ articles }) {
   return (
-    <div className="blog">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-center"
+      className="blog"
+    >
       <div className="container">
         <SectionHeader
           title={"مقالات"}

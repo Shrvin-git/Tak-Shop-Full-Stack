@@ -10,7 +10,7 @@ function NewProducts({ product }) {
 
   const lastProducts = productsArray.slice(-6);
   return (
-    <div className="new_product">
+    <div data-aos="zoom-in-down" className="new_product">
       <div className="container">
         <SectionHeader
           title={"محصولات تازه"}
