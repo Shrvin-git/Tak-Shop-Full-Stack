@@ -24,6 +24,7 @@ export default function ClientLayoutController({ children, user }) {
     "/p-user/profile",
     "/p-user/orders",
     "/p-admin",
+    "/login-register",
   ];
 
   const shouldHide = hiddenPaths.some((path) => pathname.startsWith(path));

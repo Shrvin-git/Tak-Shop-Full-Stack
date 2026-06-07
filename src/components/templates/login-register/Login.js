@@ -1,12 +1,30 @@
+"use client";
+
 import { useState } from "react";
 import styles from "./Login.module.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { showSwal } from "@/utils/helper";
 import { useRouter } from "next/navigation";
 
-function Login({ showRegisterForm }) {
+export default function Login({
+  onSubmit,
+  onForgotPassword,
+  onGoogleLogin,
+  onPhoneLogin,
+  showRegisterForm,
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [shake, setShake] = useState(false);
   const router = useRouter();
+
+  const triggerShake = () => {
+    setShake(true);
+    setTimeout(() => setShake(false), 500);
+  };
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -33,7 +51,7 @@ function Login({ showRegisterForm }) {
     }
 
     try {
-      const res = await fetch(`/api/auth/signin`, {
+      const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -74,60 +92,89 @@ function Login({ showRegisterForm }) {
   };
 
   return (
-    <div className={styles["sign_in_wrapper"]}>
-      <div className={styles["website_logo"]}>
-        <img src="./images/logo/lVector.png" alt="" />
-        تک شاپ
-      </div>
+    <div className={styles.wrapper}>
+      <div className={`${styles.overlay} ${shake ? styles.shake : ""}`}>
+        <div className={styles["logo-name"]}>تک‌شاپ</div>
+        <div className={styles.loginNumber}>
+          ورود <span></span>
+        </div>
 
-      <div className={styles["signup-login"]}>
-        <span class="">
-          <span>
-            حساب کاربری ندارید؟
+        <div className={styles["login-row"]}>
+          هیچ اکانتی ندارید؟
+          <button className={styles["login-btn"]} onClick={showRegisterForm}>
+            ثبت نام کنید
+          </button>
+        </div>
+
+        <form onSubmit={loginUser}>
+          <div className={styles.inputWrapper}>
+            <input
+              type="text"
+              placeholder="ایمیل"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="username"
+            />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="رمز عبور"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+            />
+
             <button
-              className={styles["signUp"] + " " + styles["active"]}
-              onClick={showRegisterForm}
+              type="button"
+              className={styles["eye"]}
+              onClick={() => setShowPassword((v) => !v)}
             >
-              {" "}
-              ثبت نام کنید
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
-          </span>
-        </span>
+          </div>
+
+          <button type="submit" className={styles.signInBtn} disabled={loading}>
+            {loading ? "در حال ورود..." : "ورود"}
+          </button>
+
+          <div className={styles.actions}>
+            <label className={styles.remember}>
+              <input
+                type="checkbox"
+                checked={remember}
+                onChange={() => setRemember(!remember)}
+              />
+              مرا به خاطر بسپار
+            </label>
+
+            <button
+              type="button"
+              className={styles.forgot}
+              onClick={onForgotPassword}
+            >
+              فراموشی رمز عبور
+            </button>
+          </div>
+
+          <div className={styles.divider}>
+            <span />
+            <p>یا ورود با</p>
+            <span />
+          </div>
+
+          <div className={styles.socials}>
+            <button type="button" onClick={onGoogleLogin}>
+              گوگل
+            </button>
+
+            <button type="button" onClick={onPhoneLogin}>
+              تلفن
+            </button>
+          </div>
+        </form>
       </div>
-
-      <form className={styles["form_sign_up"]} onSubmit={loginUser}>
-        <div
-          className={styles["login-inputs"] + " " + styles["email-or-username"]}
-        >
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="نام کاربری یا ایمیل "
-            id={styles["email"]}
-          />
-        </div>
-        <div className={styles["login-inputs"] + " " + styles["password"]}>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="رمز عبور"
-            id={styles["password"]}
-          />
-        </div>
-
-        <div className={styles["motto-site"]}>
-          <input type="checkbox" name="" id="" />
-          با <a href="#">قوانین و مقررات</a> این سایت موافقت میکنم
-        </div>
-
-        <button className={styles["sent_info"]} type="submit">
-          ورود
-        </button>
-      </form>
     </div>
   );
 }
-
-export default Login;

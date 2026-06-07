@@ -1,126 +1,375 @@
-.form_sign_up {
-}
-
-.website_logo {
-  font-weight: 600;
-  font-size: 32px;
-  text-transform: capitalize;
-  color: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.signup-login {
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-.login-inputs input {
+.wrapper {
   width: 100%;
-  height: 5.6rem;
-  background-color: var(--input-form);
-  border-radius: 0.8rem;
-  padding: 0.8rem 1.6rem;
-  box-shadow: 0px 3px 4px 0px #00000026;
-  color: var(--txt-black);
-  font-size: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-family: yekan;
-}
+  min-height: 100vh;
 
-.signup-login button {
-  color: var(--main-color);
-  font-family: yekan;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.signUp {
-}
-
-.motto-site {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 16px;
-}
 
-.motto-site input {
-  width: 2.4rem;
-  height: 2.4rem;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  cursor: pointer;
+  font-family: yekan;
+
+  background-image: url("../../../../public//images/ChatGPT\ Image\ ۱۶\ خرداد\ ۱۴۰۵،\ ۱۲_۰۶_۰۳.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   position: relative;
 }
 
-.form_sign_up input::placeholder {
+.logo-name {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.login-row {
+  color: white;
+
+  margin-bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 17px;
+}
+
+.login-btn {
+  border: none;
+  background: transparent;
+
+  color: #e8c8b4;
+
+  cursor: pointer;
+
+  font-family: yekan;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.wrapper::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(17, 23, 33, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.overlay {
+  width: 430px;
+backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 2;
+padding:2rem 4rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeUp 0.8s ease;
+}
+
+.loginNumber {
+  color: #fff;
+
+  font-size: 42px;
+  font-weight: 700;
+margin-top: .6rem;
+  margin-bottom: 35px;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.loginNumber span {
+  font-weight: 800;
+}
+
+.title {
+  color: white;
+
+  font-size: 28px;
+  font-weight: 400;
+
+  margin-bottom: 40px;
+}
+
+.overlay form {
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.inputWrapper input {
+  width: 100%;
+  height: 54px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 40px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  padding: 0 55px 0 22px;
+
+  color: white;
+
+  font-family: yekan;
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.inputWrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.inputWrapper input:focus {
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.15),
+    0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.eye {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+/* برای حذف رنگ آبی پس‌زمینه در حالت تکمیل خودکار (Autofill) */
+.inputWrapper input:-webkit-autofill,
+.inputWrapper input:-webkit-autofill:hover,
+.inputWrapper input:-webkit-autofill:focus,
+.inputWrapper input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff14 inset !important; 
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s; 
+}
+
+/* .inputWrapper input:focus {
+  outline: none !important;
+  background-color: #ffffff14 !important; 
+  box-shadow: none !important;
+} */
+
+.signInBtn {
+  width: 100%;
+  height: 58px;
+
+  border: none;
+  border-radius: 40px;
+
+  margin-top: 18px;
+
+  cursor: pointer;
+
+  background: #e8c8b4;
+
+  color: #373737;
+
+  font-family: yekan;
+  font-size: 18px;
+  font-weight: 700;
+
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.signInBtn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.signInBtn:hover::before {
+  left: 100%;
+}
+
+.signInBtn:hover {
+  transform: translateY(-2px);
+}
+
+.actions {
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+
   font-size: 14px;
 }
 
-.sent_info {
-  width: 100%;
-  height: 5.5rem;
-  background-color: var(--main-color);
-  border-radius: 0.8rem;
-  color: var(--txt-color);
-  font-size: 1.8rem;
-  font-family: yekan;
-  font-weight: 600;
+.remember input {
+  accent-color: #e8c8b4;
+}
+
+.forgot {
+  background: transparent;
   border: none;
+
+  color: white;
+
   cursor: pointer;
+
+  font-family: yekan;
+  font-size: 14px;
 }
 
-.website_logo,
-.signup-login,
-.form-desc,
-#phone_number,
-.motto-site,
-.sent_info {
-  margin-bottom: 1.5rem;
-}
-
-.motto-site {
+.divider {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
-  color: var(--txt-black);
+
+  gap: 12px;
+
+  margin: 35px 0 20px;
 }
 
-.motto-site input[type="checkbox"] {
-  accent-color: var(--main-color);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.divider span {
+  flex: 1;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.45);
 }
 
-.sent_info {
-  width: 100%;
-  height: 5rem;
-  background-color: var(--main-color);
-  color: #fff;
+.divider p {
+  color: white;
+  font-size: 14px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials button {
+  flex: 1;
+
+  height: 38px;
+
+  border-radius: 4px;
   border: none;
-  border-radius: 0.8rem;
-  font-size: 1.8rem;
-  font-family: yekan;
-  font-weight: bold;
+
+  background: #ffffff;
+
+  color: #333;
+
   cursor: pointer;
-  transition: background-color 0.3s;
+
+  font-family: yekan;
+  font-size: 15px;
+
+  transition: all 0.3s ease;
 }
 
-.sent_info:hover {
-  background-color: #6c14a8;
+.socials button:hover {
+  transform: translateY(-2px);
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-8px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    width: calc(100% - 40px);
+  }
+
+  .loginNumber {
+    font-size: 32px;
+    margin-bottom: 45px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
