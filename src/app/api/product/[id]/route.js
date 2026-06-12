@@ -10,7 +10,6 @@ export async function PUT(req, { params }) {
     await connectToDB();
 
     const { id } = params;
-
     const formData = await req.formData();
 
     const updateData = {
@@ -66,7 +65,6 @@ export async function GET(req, { params }) {
     await connectToDB();
 
     const { id } = params;
-
     const product = await ProductModel.findById(id)
       .populate({
         path: "comments",

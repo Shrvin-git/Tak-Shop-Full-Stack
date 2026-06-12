@@ -25,7 +25,7 @@ function Card({ product }) {
     >
       <div className={styles["discount_left_item"]}>
         <img
-          src={"/images/default/default-laptop.png" || product.images?.[0]}
+          src={product.images?.[0] || "/images/default/default-laptop.png"}
           alt={product.title}
         />
 

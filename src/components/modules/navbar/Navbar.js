@@ -1,7 +1,7 @@
 "use client";
 import "@/components/modules/navbar/navbar.css";
 
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiSearch } from "react-icons/fi";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -13,6 +13,7 @@ import CameraSvg from "./mobile/CameraSvg";
 import SmartWatch from "./mobile/SmartWatch";
 import InternetSvg from "./mobile/InternetSvg";
 import { useTheme } from "@/providers/ThemeProvider";
+import Search from "./Search";
 
 const IconMap = {
   MobileSvg,
@@ -28,6 +29,8 @@ function Navbar({ user }) {
   const [categories, setCategories] = useState([]);
   const { theme, toggleTheme } = useTheme();
   const [showMobileMenu, setShowMobileMenu] = useState(true);
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const [cartCount, setCartCount] = useState(0);
 
@@ -284,10 +287,12 @@ function Navbar({ user }) {
           </div>
 
           <div className="nav-bar__icons-container">
-            <div className="search-icon">
-              <Link href={"/product.html"}>
-                <img src="/svgs/Vector.svg" alt="" />
-              </Link>
+            <div className="search-icon" onClick={() => setIsSearchOpen(true)}>
+              <FiSearch />
+              <Search
+                isOpen={isSearchOpen}
+                onClose={() => setIsSearchOpen(false)}
+              />
             </div>
 
             <div onClick={toggleTheme} className="change-them">

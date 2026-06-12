@@ -267,10 +267,37 @@
   cursor: pointer;
 }
 
-/* .cart,
-.user-icon {
-  display: none;
-} */
+.search-icon svg {
+  width: 4rem;
+  height: 4rem;
+  color: var(--main-color); /* این رنگ به جای currentColor می‌نشیند */
+}
+.search-icon svg {
+  width: 4rem;
+  height: 4rem;
+  color: #7e22ce;
+}
+
+/* تنظیم نقطه رخش دم */
+.search-icon svg line {
+  transform-origin: 16.65px 16.65px; /* محل اتصال دم */
+  transition: transform 0.2s ease;
+}
+
+/* هنگام هاور */
+.search-icon:hover svg line {
+  animation: handleShake 0.4s ease-in-out infinite;
+}
+
+/* انیمیشن لرزش */
+@keyframes handleShake {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(10deg); }
+  50%  { transform: rotate(-8deg); }
+  75%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
 
 .register-btn-wrapper {
   display: flex;

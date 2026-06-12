@@ -1,0 +1,427 @@
+.overlay,
+.overlay * {
+  box-sizing: border-box;
+  font-family: var(--primary-font), sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  height: 100dvh;
+  padding: 72px 16px 24px;
+
+  direction: rtl;
+
+  /* overflow روی overlay نباید مانع scroll داخلی بشه */
+  overflow: clip;
+  overscroll-behavior: none;
+
+  background: rgba(7, 10, 19, 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.searchPanel {
+  width: min(680px, 100%);
+  height: calc(100dvh - 96px);
+  max-height: calc(100dvh - 96px);
+
+  display: flex;
+  flex-direction: column;
+
+  /* panel خودش clip میکنه، نه overlay */
+  overflow: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55),
+    0 0 0 8px rgba(30, 41, 59, 0.28);
+
+  animation: panelIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── هدر ── */
+.topBar {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 26px 28px 18px;
+}
+
+.breadcrumb {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.title {
+  margin: 0;
+
+  color: #cbd5e1;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.closeButton {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 11px;
+
+  background: rgba(15, 23, 42, 0.6);
+  color: #64748b;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.closeButton:hover {
+  background: rgba(30, 41, 59, 0.75);
+  color: #e2e8f0;
+  transform: rotate(90deg);
+}
+
+/* ── سرچ باکس ── */
+.searchBox {
+  flex-shrink: 0;
+
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 28px 18px;
+  padding: 0 16px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: rgba(15, 23, 42, 0.65);
+
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.searchBox:focus-within {
+  border-color: #334155;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.searchIcon {
+  flex-shrink: 0;
+  color: #94a3b8;
+  font-size: 22px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: #475569;
+}
+
+.clearButton {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #64748b;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.clearButton:hover {
+  background: rgba(51, 65, 85, 0.45);
+  color: #e2e8f0;
+}
+
+/* ── پیشنهادات ── */
+.quickArea {
+  flex-shrink: 0;
+  padding: 0 28px 28px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  color: #64748b;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  min-height: 32px;
+  padding: 7px 14px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  background: rgba(30, 41, 59, 0.58);
+  color: #94a3b8;
+
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.tag:hover {
+  background: #334155;
+  color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+/* ── ناحیه نتایج ── */
+.resultsArea {
+  /* مهم‌ترین بخش: flex: 1 + min-height: 0 */
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  /* clip میکنه اما scroll داخلی رو نمیبنده */
+  overflow: hidden;
+
+  padding: 0 14px 14px;
+}
+
+.resultsHeader {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2px 14px 10px;
+
+  color: #64748b;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.resultsHeader small {
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── لیست نتایج اسکرول‌پذیر ── */
+.resultsList {
+  /* این سه خط با هم اسکرول داخلی رو فعال میکنن */
+  flex: 1;
+  min-height: 0;
+  overflow-y: scroll; /* scroll به جای auto - همیشه scrollbar نشون میده */
+
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  isolation: isolate;
+}
+
+.resultsList::-webkit-scrollbar {
+  width: 5px;
+}
+
+.resultsList::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 999px;
+}
+
+.resultsList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── حالت خالی ── */
+.emptyState {
+  flex-shrink: 0;
+
+  margin: 0 14px 14px;
+  padding: 26px 18px;
+
+  text-align: center;
+
+  border: 1px dashed rgba(100, 116, 139, 0.28);
+  border-radius: 16px;
+
+  background: rgba(15, 23, 42, 0.38);
+}
+
+.emptyState strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.emptyState p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ── انیمیشن‌ها ── */
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── موبایل ── */
+@media (max-width: 640px) {
+  .overlay {
+    padding: 16px 10px;
+  }
+
+  .searchPanel {
+    width: 100%;
+    height: calc(100dvh - 32px);
+    max-height: calc(100dvh - 32px);
+    border-radius: 18px;
+  }
+
+  .topBar {
+    padding: 22px 18px 14px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
+
+  .searchBox {
+    height: 52px;
+    margin: 0 18px 16px;
+    padding: 0 13px;
+    border-radius: 13px;
+  }
+
+  .quickArea {
+    padding: 0 18px 22px;
+  }
+
+  .resultsArea {
+    padding: 0 10px 10px;
+  }
+}
+
+/* ── بدون انیمیشن برای کاربران حساس ── */
+@media (prefers-reduced-motion: reduce) {
+  .searchPanel,
+  .closeButton,
+  .searchBox,
+  .clearButton,
+  .tag {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ── loading ── */
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(100, 116, 139, 0.2);
+  border-top-color: #64748b;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
