@@ -289,11 +289,12 @@ function Navbar({ user }) {
           <div className="nav-bar__icons-container">
             <div className="search-icon" onClick={() => setIsSearchOpen(true)}>
               <FiSearch />
-              <Search
-                isOpen={isSearchOpen}
-                onClose={() => setIsSearchOpen(false)}
-              />
             </div>
+
+            <Search
+              isOpen={isSearchOpen}
+              onClose={() => setIsSearchOpen(false)}
+            />
 
             <div onClick={toggleTheme} className="change-them">
               {theme === "light" ? (

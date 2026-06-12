@@ -5,8 +5,9 @@ import { createPortal } from "react-dom";
 import { IoSearchOutline, IoClose, IoTimeOutline } from "react-icons/io5";
 import SearchResultItem from "./SearchResultItem";
 import styles from "./Search.module.css";
+import { usePathname } from "next/navigation";
 
-const QUICK_TAGS = ["لپ‌تاپ", "گوشی سامسونگ", "هدفون", "آیفون", "ساعت هوشمند"];
+const QUICK_TAGS = ["لپ‌تاپ", "گوشی", "هدفون", "apple", "ساعت هوشمند"];
 
 const EMPTY_RESULTS = { products: [], articles: [], categories: [] };
 
@@ -116,6 +117,7 @@ export default function Search({ isOpen, onClose }) {
     results.products.length +
     results.articles.length +
     results.categories.length;
+
   const hasQuery = query.trim().length > 0;
   const hasResults = totalResults > 0;
 
@@ -147,7 +149,7 @@ export default function Search({ isOpen, onClose }) {
       subtitle: "محصول",
       image: p.images?.[0] ?? null,
       price: p.price,
-      href: `/products/${p.category}/${p._id}`,
+      href: `/products/${p.category?.slug || p.category?._id || "unknown"}/${p._id}`,
     }),
     article: (a) => ({
       id: a._id,

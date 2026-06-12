@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   IoDocumentTextOutline,
   IoGridOutline,
@@ -20,6 +20,7 @@ const TYPE_CONFIG = {
 const DEFAULT_CONFIG = { label: "نتیجه", Icon: IoCubeOutline };
 
 export default function SearchResultItem({ item, onSelect }) {
+  const router = useRouter();
   const { label, Icon } = TYPE_CONFIG[item.type] ?? DEFAULT_CONFIG;
 
   const formattedPrice = item.price
@@ -28,12 +29,17 @@ export default function SearchResultItem({ item, onSelect }) {
       : item.price
     : null;
 
-  const handleClick = () => {
+  // اول modal میبنده، بعد navigate میکنه
+  const handleClick = (e) => {
+    e.preventDefault();
     onSelect?.();
+    setTimeout(() => {
+      router.push(item.href);
+    }, 50);
   };
 
   return (
-    <Link href={item.href} className={styles.item} onClick={handleClick}>
+    <a href={item.href} className={styles.item} onClick={handleClick}>
       {/* تصویر یا آیکون */}
       <div className={`${styles.media} ${styles[item.type] ?? ""}`}>
         {item.image ? (
@@ -70,6 +76,6 @@ export default function SearchResultItem({ item, onSelect }) {
       <div className={styles.arrow} aria-hidden="true">
         <IoArrowBackOutline />
       </div>
-    </Link>
+    </a>
   );
 }

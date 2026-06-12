@@ -25,7 +25,8 @@ export async function GET(req) {
           { tags: regex },
         ],
       })
-        .select("title slug images price")
+        .select("title slug images price category") // حتما فیلد category را اینجا هم اضافه کن
+        .populate("category") // اینجا پاپولیت انجام می‌شود
         .limit(5)
         .lean(),
 
