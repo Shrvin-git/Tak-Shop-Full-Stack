@@ -2,10 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { IoSearchOutline, IoClose, IoTimeOutline } from "react-icons/io5";
-import SearchResultItem from "./SearchResultItem";
+import { IoClose, IoSearchOutline, IoTimeOutline } from "react-icons/io5";
 import styles from "./Search.module.css";
-import { usePathname } from "next/navigation";
+import SearchResultItem from "./SearchResultItem";
 
 const QUICK_TAGS = ["لپ‌تاپ", "گوشی", "هدفون", "apple", "ساعت هوشمند"];
 
@@ -174,6 +173,10 @@ export default function Search({ isOpen, onClose }) {
     ...results.articles.map(normalize.article),
     ...results.categories.map(normalize.category),
   ];
+
+  const getMeFunc = () => {
+    return true;
+  };
 
   return createPortal(
     <div className={styles.overlay} onMouseDown={handleOverlayMouseDown}>
