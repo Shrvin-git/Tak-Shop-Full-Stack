@@ -176,8 +176,12 @@ export default function SignUp({ showloginForm }) {
           <div className={styles["top-ribbon"]} />
 
           <div className={styles["logo-area"]}>
-            <div className={styles["logo-icon"]}>🛍️</div>
-            <div className={styles["logo-name"]}>تک‌شاپ</div>
+            <div className={styles["logo-name"]}>
+              <a href="/">
+                <img src="/logo/Vector.png" alt="Tak Shop Logo" />
+                <span>تک شاپ</span>
+              </a>
+            </div>
             <div className={styles["logo-sub"]}>ساخت حساب کاربری جدید</div>
           </div>
 
