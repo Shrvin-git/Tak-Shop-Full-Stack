@@ -24,6 +24,12 @@ function NewProducts({ product }) {
           renderComponent={NewProductBox}
           loop={lastProducts.length > 50}
           autoplay={false}
+          customBreakpoints={{
+            300: { slidesPerView: 2, spaceBetween: 10 },
+            500: { slidesPerView: 3, spaceBetween: 10 },
+            768: { slidesPerView: 4, spaceBetween: 15 },
+            992: { slidesPerView: 5, spaceBetween: 20 },
+          }}
         />
 
         <ShowAll />

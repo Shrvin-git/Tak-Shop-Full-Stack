@@ -28,6 +28,12 @@ function BestSellingProducts({ product }) {
           renderComponent={Card}
           autoplay={false}
           loop={false}
+          customBreakpoints={{
+            300: { slidesPerView: 2, spaceBetween: 10 },
+            500: { slidesPerView: 3, spaceBetween: 10 },
+            768: { slidesPerView: 4, spaceBetween: 15 },
+            992: { slidesPerView: 5, spaceBetween: 20 },
+          }}
         />
 
         {/* <BestSellingWrapper product={bestDiscounted} /> */}

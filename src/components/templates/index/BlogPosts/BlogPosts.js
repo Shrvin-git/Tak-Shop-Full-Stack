@@ -21,9 +21,14 @@ function BlogPosts({ articles }) {
         <UniversalSlider
           data={articles}
           renderComponent={BlogBox}
-          // اگر خواستی تنظیمات Swiper رو همینجا عوض کنی:
           loop={false}
           autoplay={{ delay: 2500 }}
+          customBreakpoints={{
+            300: { slidesPerView: 2, spaceBetween: 10 },
+            500: { slidesPerView: 3, spaceBetween: 10 },
+            768: { slidesPerView: 4, spaceBetween: 15 },
+            992: { slidesPerView: 5, spaceBetween: 20 },
+          }}
         />
         <ShowAll />
       </div>

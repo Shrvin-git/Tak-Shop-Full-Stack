@@ -28,7 +28,7 @@ const IconMap = {
 function Navbar({ user }) {
   const [categories, setCategories] = useState([]);
   const { theme, toggleTheme } = useTheme();
-  const [showMobileMenu, setShowMobileMenu] = useState(true);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
