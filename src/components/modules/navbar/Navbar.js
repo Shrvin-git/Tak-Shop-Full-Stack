@@ -29,6 +29,7 @@ function Navbar({ user }) {
   const [categories, setCategories] = useState([]);
   const { theme, toggleTheme } = useTheme();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileMenuCategory, setShowMobileMenuCategory] = useState(false);
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -165,12 +166,23 @@ function Navbar({ user }) {
                 <Link href={"/"}>صفحه اصلی</Link>
               </li>
               <li id="list-items" className="list-items">
-                <div className="sss">
+                <div
+                  onClick={() =>
+                    setShowMobileMenuCategory(!showMobileMenuCategory)
+                  }
+                  className="sss"
+                >
                   دسته بندی کالاها
                   <FiChevronDown width={24} height={24} />
                 </div>
 
-                <div className="mega-menu-mobile">
+                <div
+                  className={
+                    showMobileMenuCategory
+                      ? "mega-menu-mobile--open"
+                      : "mega-menu-mobile"
+                  }
+                >
                   {categories.map((items, index) => (
                     <div key={index} className="mega-meniu-mobile-items">
                       {items.brand}
@@ -182,17 +194,17 @@ function Navbar({ user }) {
                 </div>
               </li>
               <li className="list-items">
-                <Link href={"blog.html"}>بلاگ پست</Link>
+                <Link href={"/blog"}>بلاگ پست</Link>
               </li>
               <li className="list-items">
-                <Link href={"#"}>تخفیف</Link>
+                <Link href={"/offer"}>تخفیف</Link>
               </li>
               <li></li>
               <li className="list-items">
-                <Link href={"about-us.html"}>درباره ما</Link>
+                <Link href={"/about-us"}>درباره ما</Link>
               </li>
               <li className="list-items">
-                <Link href={"contact-us.html"}>تماس با ما</Link>
+                <Link href={"/contact-us"}>تماس با ما</Link>
               </li>
             </ul>
           </div>
@@ -342,35 +354,6 @@ function Navbar({ user }) {
                 </div>
               </Link>
             </div>
-
-            {/* <div className="register-btn-wrapper">
-              {user ? (
-                userInfo.role === "ADMIN" ? (
-                  <div className="admin-links">
-                    <Link href="/p-admin">پنل ادمین</Link>
-                    <Link href="/p-user">پنل کاربر</Link>
-                  </div>
-                ) : (
-                  <Link href="/p-user" className="user-icon">
-                    <img className="pop" src={userInfo.profileImage} alt="" />
-                  </Link>
-                )
-              ) : (
-                <Link className="user-profile" href="/login-register">
-                  <span>ثبت نام / ورود</span>
-                </Link>
-              )}
-
-              <Link className="cart" href={"/cart"}>
-                <div className="cart-icon-wrapper">
-                  <img className="pop" src="/svgs/cart.svg" alt="cart" />
-
-                  {cartCount > 0 && (
-                    <span className="cart-badge">{cartCount}</span>
-                  )}
-                </div>
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

@@ -94,7 +94,12 @@ export default function Login({
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.overlay} ${shake ? styles.shake : ""}`}>
-        <div className={styles["logo-name"]}>تک‌شاپ</div>
+        <div className={styles["logo-name"]}>
+          <a href="/">
+            <img src="/logo/Vector.png" alt="Tak Shop Logo" />
+            <span>تک شاپ</span>
+          </a>
+        </div>
         <div className={styles.loginNumber}>
           ورود <span></span>
         </div>

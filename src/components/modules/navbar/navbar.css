@@ -22,6 +22,81 @@
   pointer-events: auto;
 }
 
+.mobile-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobile-profile-image {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.mobile-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.admin-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff4d4f;
+  border: 2px solid #fff;
+}
+
+.mobile-profile-menu {
+  position: absolute;
+  bottom: 72px;
+  left: 10px;
+
+  width: 190px;
+
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  animation: fadeUp 0.25s ease;
+}
+
+.mobile-profile-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+
+.mobile-profile-menu a:hover {
+  background: #f7f7f7;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* =================== Mega Menu Started =================== */
 .menu-container {
   position: absolute;
@@ -291,13 +366,22 @@
 
 /* انیمیشن لرزش */
 @keyframes handleShake {
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(10deg); }
-  50%  { transform: rotate(-8deg); }
-  75%  { transform: rotate(10deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-
 
 .register-btn-wrapper {
   display: flex;
@@ -353,7 +437,7 @@
   background-color: var(--bg-color);
   left: 0;
   right: 0;
-  top: -60rem;
+  top: -70rem;
   transition: all ease-in-out 0.3s;
 }
 
@@ -426,13 +510,36 @@
   fill: var(--s292929);
 }
 
+/* کانتینر اصلی */
 .mega-menu-mobile--open {
-  opacity: 1 !important;
-  height: 32.5rem !important;
-  padding: 2rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  /* background: #fffffff2; */
+  backdrop-filter: blur(10px);
+  /* border: 1px solid #ffffff4d; */
+  /* border-radius: 12px; */
+  overflow: hidden;
+  padding: 8px 0;
+  box-shadow: 0 8px 30px #0000001f;
+  transition: all 0.3s;
+}
+
+/* آیتم‌های لیست */
+.mega-meniu-mobile-items {
+  padding: 12px 20px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* استایل لینک */
+.mega-meniu-mobile-items a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+}
+
+/* اضافه کردن خط جداکننده ظریف */
+.mega-meniu-mobile-items:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
 }
 
 .list-items:nth-child(2) {
@@ -516,6 +623,16 @@
   justify-content: center;
   color: var(--txt);
 }
+
+
+.menu-mobile-items span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt);
+}
+
 
 .menu-active {
   color: var(--main-color) !important;
@@ -783,15 +900,21 @@
     opacity: 0;
   }
 
+  .mega-menu-mobile--open {
+    overflow: visible;
+    opacity: 1;
+    margin-right: 2rem;
+    padding: 1rem 0;
+  }
 
-  .register-btn-wrapper{
+  .register-btn-wrapper {
     display: none;
   }
 }
 
 /* =========================================================================================== */
 @media screen and (max-width: 576px) {
-  .menu-mobile-items a {
+  .menu-mobile-items span {
     font-size: 1.4rem;
   }
 }

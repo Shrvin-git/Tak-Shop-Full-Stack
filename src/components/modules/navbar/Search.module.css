@@ -29,7 +29,6 @@
 
 .searchPanel {
   width: min(680px, 100%);
-  height: calc(100dvh - 96px);
   max-height: calc(100dvh - 96px);
 
   display: flex;
@@ -357,7 +356,6 @@
 
   .searchPanel {
     width: 100%;
-    height: calc(100dvh - 32px);
     max-height: calc(100dvh - 32px);
     border-radius: 18px;
   }

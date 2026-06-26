@@ -35,7 +35,7 @@ export default function ClientLayoutController({ children, user }) {
       <div>{children}</div>
       {!shouldHide && <Newsletter />}
       {!shouldHide && <Footer />}
-      {!shouldHide && <MobileMenu />}
+      {!shouldHide && <MobileMenu user={user} />}
     </>
   );
 }

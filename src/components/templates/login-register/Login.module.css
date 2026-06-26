@@ -22,6 +22,19 @@
   font-weight: 700;
 }
 
+.logo-name a {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-name a img {
+  width: 4rem;
+  height: 4rem;
+}
+
 .login-row {
   color: white;
 
@@ -59,10 +72,10 @@
 
 .overlay {
   width: 430px;
-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   position: relative;
   z-index: 2;
-padding:2rem 4rem ;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +88,7 @@ padding:2rem 4rem ;
 
   font-size: 42px;
   font-weight: 700;
-margin-top: .6rem;
+  margin-top: 0.6rem;
   margin-bottom: 35px;
 
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -163,9 +176,9 @@ margin-top: .6rem;
 .inputWrapper input:-webkit-autofill:hover,
 .inputWrapper input:-webkit-autofill:focus,
 .inputWrapper input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px #ffffff14 inset !important; 
+  -webkit-box-shadow: 0 0 0 1000px #ffffff14 inset !important;
   -webkit-text-fill-color: white !important;
-  transition: background-color 5000s ease-in-out 0s; 
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* .inputWrapper input:focus {
