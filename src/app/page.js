@@ -1,5 +1,5 @@
+import Banner from "@/components/templates/index/banner/BannerClient";
 import FAQ from "@/components/templates/faq/FAQ";
-import Banner from "@/components/templates/index/banner/Banner";
 import BestSellingProducts from "@/components/templates/index/bestSellingProducts/BestSellingProducts";
 import BlogPosts from "@/components/templates/index/BlogPosts/BlogPosts";
 import Category from "@/components/templates/index/category/Category";
@@ -15,10 +15,7 @@ import CategoryModel from "@/models/Category";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  // دیتابیس را وصل می‌کنیم
   await connectToDB();
-
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const allProducts = await ProductModel.find({}).populate("category").lean();
   const allArticles = await ArticleModel.find({}).lean();
