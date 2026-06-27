@@ -69,31 +69,190 @@
   box-shadow: 0 0 1rem var(--box-shadow);
 }
 
-@media screen and (max-width: 1200px) {
+/* =========================================================================================== */
+@media screen and (max-width: 1400px) {
   .newsletter-right {
-    width: 35rem;
+    width: 32%;
+  }
+
+  .newsletter-left {
+    width: 60%;
   }
 }
 
+/* =========================================================================================== */
+@media screen and (max-width: 1200px) {
+  .newsletter-wrapper {
+    gap: 2rem;
+  }
+
+  .newsletter-right {
+    width: 35%;
+  }
+
+  .newsletter-left {
+    width: 63%;
+  }
+
+  .newsletter-right h2 {
+    font-size: 1.9rem;
+  }
+
+  .newsletter-right p {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-button {
+    width: 10rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 992px) {
+  .newsletter-wrapper {
+    gap: 2.5rem;
+  }
+
+  .newsletter-right {
+    width: 38%;
+  }
+
+  .newsletter-left {
+    width: 60%;
+  }
+
+  .newsletter-form {
+    padding: 5px 10px;
+  }
+
+  .newsletter-input {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-input::placeholder {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-button {
+    width: 9.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================================================== */
 @media screen and (max-width: 768px) {
+  .newsletter-container {
+    padding: 2rem 1.5rem;
+  }
+
   .newsletter-wrapper {
     flex-direction: column;
-  }
-  .faq_right,
-  .faq_left,
-  .newsletter-right,
-  .newsletter-left {
-    width: 100% ;
+    gap: 2rem;
+    text-align: center;
   }
 
-  .newsletter-right{
-    text-align: center;
-    margin-bottom: 1.5rem;
+  .newsletter-right,
+  .newsletter-left {
+    width: 100%;
+  }
+
+  .newsletter-right h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .newsletter-right p {
+    font-size: 1.5rem;
+    line-height: 1.9;
+  }
+
+  .newsletter-form {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 568px) {
-  .accordion_title {
-    font-size: 1.5rem;
+/* =========================================================================================== */
+@media screen and (max-width: 576px) {
+  .newsletter-container {
+    padding: 2rem 1rem;
+  }
+
+  .newsletter-form {
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .newsletter-input {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-input::placeholder {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-button {
+    width: 9rem;
+    min-width: 9rem;
+    height: 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .newsletter-right h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-right p {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 470px) {
+  .newsletter-form {
+
+    border: none;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    border: 2px solid rgba(234, 234, 234, 0.9);
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .newsletter-button {
+    width: 25%;
+    height: 4.2rem;
+  }
+}
+
+/* =========================================================================================== */
+@media screen and (max-width: 400px) {
+  .newsletter-container {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .newsletter-right h2 {
+    font-size: 1.8rem;
+  }
+
+  .newsletter-right p {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-input {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+
+  .newsletter-input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .newsletter-button {
+    font-size: 1.3rem;
+    height: 4rem;
   }
 }

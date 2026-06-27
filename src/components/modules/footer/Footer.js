@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className={styles["footer"]}>
       <div className="container">
-        <footer className={styles["footer"]}>
+        <footer className={`${styles["footer"]} ${styles["footer-plus"]}`}>
           <div className={styles["container"]}>
             <div className={styles["footer-top"]}>
               <div className={styles["footer-top__right"]}>

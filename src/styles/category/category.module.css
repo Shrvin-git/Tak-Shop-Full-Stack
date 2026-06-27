@@ -12,12 +12,12 @@
 }
 
 .all-products-left-wrapper {
-padding: 1.8rem 1.8rem 1.8rem 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1.5rem;
+  padding: 1.8rem 1.8rem 1.8rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
 .container {
@@ -35,4 +35,130 @@ padding: 1.8rem 1.8rem 1.8rem 0;
 
 .all-products-left {
   width: 100%;
+}
+
+.main {
+  margin-top: 10rem;
+  padding-top: 8rem;
+}
+
+.container {
+  width: 1250px;
+}
+
+/* ============================== */
+
+.all-labtop-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.all-products-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.all-products-left-wrapper {
+  padding: 1.8rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ====================================================================== */
+
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 1200px) {
+  .main {
+    padding-top: 6rem;
+  }
+
+  .all-labtop-wrapper {
+    gap: 1.6rem;
+  }
+
+  .all-products-left-wrapper {
+    gap: 1.2rem;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 992px) {
+  .main {
+    margin-top: 8rem;
+    padding-top: 4rem;
+  }
+
+  .all-labtop-wrapper {
+    gap: 1rem;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 7rem;
+    padding-top: 3rem;
+  }
+
+  .all-labtop-wrapper {
+    flex-direction: column;
+  }
+
+  .all-products-left {
+    width: 100%;
+  }
+
+  .all-products-left-wrapper {
+    justify-content: center;
+    padding: 1.5rem 0;
+    gap: 1rem;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 576px) {
+  .main {
+    margin-top: 6rem;
+    padding-top: 2rem;
+  }
+
+  .all-products-left-wrapper {
+    gap: 0.8rem;
+    justify-content: center;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 470px) {
+  .all-products-left-wrapper {
+    gap: 0.7rem;
+  }
+}
+
+/* ====================================================================== */
+
+@media (max-width: 400px) {
+  .main {
+    padding-top: 1.5rem;
+  }
+
+  .all-products-left-wrapper {
+    gap: 0.6rem;
+  }
 }

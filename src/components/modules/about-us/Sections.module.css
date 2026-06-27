@@ -50,84 +50,157 @@
   border-radius: 0.8rem;
 }
 
-
 /* ? Media Queries ================================================================ */
 
+/* ===================== 1200px ===================== */
 
-@media (min-width: 1400px) {
-    .container {
-        width: 1250px;
-    }
-}
-
-/* =========================================================================================== */
-@media screen and (max-width: 1400px) {}
-
-/* =========================================================================================== */
 @media screen and (max-width: 1200px) {
-    .hero-section-slider {
-        height: 30rem;
-    }
+  .abous-us-sections {
+    gap: 3rem;
+  }
+
+  .abous-us-text {
+    width: 60%;
+  }
+
+  .abous-us-img {
+    width: 36%;
+    height: 22rem;
+  }
+
+  .abous-us-sections img {
+    width: 85%;
+  }
+
+  .abous-us-sections-title {
+    font-size: 1.9rem;
+  }
+
+  .abous-us-sections-desc {
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
 }
 
-/* =========================================================================================== */
+/* ===================== 992px ===================== */
+
 @media screen and (max-width: 992px) {
-    .abous-us-sections img {
-        height: 70%;
-    }
+  .abous-us-sections {
+    gap: 2.5rem;
+  }
+
+  .abous-us-text {
+    width: 58%;
+  }
+
+  .abous-us-img {
+    width: 38%;
+    height: 20rem;
+  }
+
+  .abous-us-sections img {
+    width: 100%;
+    max-width: 24rem;
+  }
+
+  .abous-us-sections-title {
+    font-size: 1.8rem;
+  }
+
+  .abous-us-sections-desc {
+    font-size: 1.45rem;
+    line-height: 2.1;
+  }
 }
 
-/* =========================================================================================== */
+/* ===================== 768px ===================== */
+
 @media screen and (max-width: 768px) {
-.main {
-        padding-top: 2rem;
-    }
-    .about-us-title h1 {
-        text-align: center;
-    }
+  .abous-us-sections {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
 
-    .abous-us-sections {
-        flex-direction: column-reverse;
-    }
+  .abous-us-sections-revers {
+    flex-direction: column !important;
+  }
 
-    .abous-us-sections-revers {
-        flex-direction: column !important;
-    }
+  .abous-us-text,
+  .abous-us-img {
+    width: 100%;
+  }
 
-    .abous-us-sections-right,
-    .abous-us-img {
-        width: 100%;
-    }
+  .abous-us-img {
+    height: auto;
+  }
 
-    .abous-us-sections img {
-        max-width: 25rem;
-        height: 95%;
-    }
+  .abous-us-sections img {
+    width: 100%;
+    max-width: 26rem;
+    height: auto;
+  }
 
-    .about-us-email {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
+  .abous-us-sections-right {
+    align-items: center;
+    gap: 1.5rem;
+  }
 
-    .about-us-email-item {
-        width: 100%;
-    }
+  .abous-us-sections-title {
+    font-size: 1.8rem;
+    padding-right: 0;
+  }
+
+  .abous-us-sections-title::before {
+    display: none;
+  }
+
+  .abous-us-sections-desc {
+    font-size: 1.45rem;
+    line-height: 2.3;
+  }
 }
 
-/* =========================================================================================== */
+/* ===================== 576px ===================== */
+
 @media screen and (max-width: 576px) {
-    .abous-us-sections img {
-        max-width: 20rem;
-        height: 85%;
-    }
+  .abous-us-sections {
+    gap: 1.8rem;
+    margin-bottom: 4rem;
+  }
 
-    .store-map {
-        height: 20rem;
-    }
+  .abous-us-sections img {
+    max-width: 22rem;
+  }
+
+  .abous-us-sections-title {
+    font-size: 1.7rem;
+  }
+
+  .abous-us-sections-desc {
+    font-size: 1.35rem;
+    line-height: 2.2;
+  }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 470px) {}
+/* ===================== 450px ===================== */
 
-/* =========================================================================================== */
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 450px) {
+  .abous-us-sections {
+    gap: 1.5rem;
+  }
+
+  .abous-us-sections img {
+    max-width: 18rem;
+  }
+
+  .abous-us-sections-title {
+    font-size: 1.6rem;
+  }
+
+  .abous-us-sections-desc {
+    font-size: 1.25rem;
+    line-height: 2.1;
+  }
+}

@@ -73,102 +73,86 @@ function BestSellLaptopsCard({
 
   return (
     <Link className={styles.link} href={`/products/${category.slug}/${_id}`}>
-      <div className={styles["laptop_best_sell_items"]}>
-        <div className={styles["laptop_best_sell_items_right"]}>
+      <div className={styles.laptop_best_sell_items}>
+        {/* Image */}
+        <div className={styles.laptop_best_sell_items_right}>
           <img
             src={"/images/default/default-laptop.png" || images?.[0]}
             alt={title}
           />
         </div>
 
-        <div className={styles["laptop_best_sell_items_left"]}>
+        {/* Content */}
+        <div className={styles.laptop_best_sell_items_left}>
+          {/* Header */}
           <div className={styles["laptop_best_sell_items-header"]}>
-            <span>{index + 1}</span>
-            <h3> {title}</h3>
+            <span className={styles.rank}>{index + 1}</span>
+
+            <h3>{title}</h3>
           </div>
 
-          <div className={styles["laptop_best_sell_items-main"]}>
-            <div className={styles["div1"]}>
-              <div className={styles["mark"]}>
-                <Brand />
-                <span>{brand}</span>
-              </div>
-
-              <div className={styles["GPU-mark"]}>
-                <GpuIcon />
-                <span>{attributes?.[2]?.value}</span>
-              </div>
+          {/* Specs */}
+          <div className={styles.specs_grid}>
+            <div className={styles.spec_item}>
+              <Brand />
+              <span>{brand}</span>
             </div>
 
-            <div className={styles["div1"]}>
-              <div className={styles["display"]}>
-                <Display />
-                <span>{attributes?.[3]?.value} Inch</span>
-              </div>
-
-              <div className={styles["CPU-mark"]}>
-                <CpuIcon />
-                <span>{attributes?.[1]?.value}</span>
-              </div>
+            <div className={styles.spec_item}>
+              <CpuIcon />
+              <span>{attributes?.[1]?.value}</span>
             </div>
 
-            <div className={styles["div1"]}>
-              <div className={styles["RAM"]}>
-                <RamIcon />
-                <span>{varians?.[0]?.value} RAM</span>
-              </div>
+            <div className={styles.spec_item}>
+              <GpuIcon />
+              <span>{attributes?.[2]?.value}</span>
+            </div>
 
-              <div className={styles["HDD"]}>
-                <HardIcon />
-                <span>256 GB SSD</span>
-              </div>
+            <div className={styles.spec_item}>
+              <Display />
+              <span>{attributes?.[3]?.value} Inch</span>
+            </div>
+
+            <div className={styles.spec_item}>
+              <RamIcon />
+              <span>{varians?.[0]?.value} RAM</span>
+            </div>
+
+            <div className={styles.spec_item}>
+              <HardIcon />
+              <span>256 GB SSD</span>
             </div>
           </div>
 
-          <div className={styles["laptop_best_sell_items-price"]}>
-            <div
-              style={{
-                display: "flex",
-                gap: "8px",
-                flexWrap: "wrap",
-              }}
-            >
+          {/* Bottom */}
+          <div className={styles.laptop_best_sell_items_price}>
+            <div className={styles.usage_wrapper}>
               {matchedUsages.map((item) => (
-                <div key={item.slug} className={styles["laptop-usage-label"]}>
-                  <span>{item.title}</span>
-                </div>
+                <span key={item.slug} className={styles.laptop_usage_label}>
+                  {item.title}
+                </span>
               ))}
             </div>
 
-            <div className={styles["laptop-price"]}>
+            <div className={styles.laptop_price}>
               {discountPrice ? (
-                <div className={styles["discount-wrapper"]}>
-                  <span
-                    style={{
-                      textDecoration: "line-through",
-                      color: "red",
-                      fontSize: "14px",
-                      display: "block",
-                    }}
-                  >
+                <>
+                  <div className={styles.old_price}>
                     {formatPrice(price)}
 
-                    {discountPrice && (
-                      <div className={styles["discount-percent"]}>
-                        {discountPercent}٪
-                      </div>
-                    )}
-                  </span>
-                  <span style={{ fontWeight: "bold" }}>
-                    {formatPrice(discountPrice)}
-                  </span>
-                  تومان
-                </div>
-              ) : (
-                <>
-                  <span>{formatPrice(finalPrice)}</span>
-                  تومان
+                    <span className={styles.discount_percent}>
+                      {discountPercent}٪
+                    </span>
+                  </div>
+
+                  <div className={styles.new_price}>
+                    {formatPrice(discountPrice)} تومان
+                  </div>
                 </>
+              ) : (
+                <div className={styles.new_price}>
+                  {formatPrice(finalPrice)} تومان
+                </div>
               )}
             </div>
           </div>
@@ -176,6 +160,112 @@ function BestSellLaptopsCard({
       </div>
     </Link>
   );
+
+  // return (
+  //   <Link className={styles.link} href={`/products/${category.slug}/${_id}`}>
+  //     <div className={styles["laptop_best_sell_items"]}>
+  //       <div className={styles["laptop_best_sell_items_right"]}>
+  //         <img
+  //           src={"/images/default/default-laptop.png" || images?.[0]}
+  //           alt={title}
+  //         />
+  //       </div>
+
+  //       <div className={styles["laptop_best_sell_items_left"]}>
+  //         <div className={styles["laptop_best_sell_items-header"]}>
+  //           <span>{index + 1}</span>
+  //           <h3> {title}</h3>
+  //         </div>
+
+  //         <div className={styles["laptop_best_sell_items-main"]}>
+  //           <div className={styles["div1"]}>
+  //             <div className={styles["mark"]}>
+  //               <Brand />
+  //               <span>{brand}</span>
+  //             </div>
+
+  //             <div className={styles["GPU-mark"]}>
+  //               <GpuIcon />
+  //               <span>{attributes?.[2]?.value}</span>
+  //             </div>
+  //           </div>
+
+  //           <div className={styles["div1"]}>
+  //             <div className={styles["display"]}>
+  //               <Display />
+  //               <span>{attributes?.[3]?.value} Inch</span>
+  //             </div>
+
+  //             <div className={styles["CPU-mark"]}>
+  //               <CpuIcon />
+  //               <span>{attributes?.[1]?.value}</span>
+  //             </div>
+  //           </div>
+
+  //           <div className={styles["div1"]}>
+  //             <div className={styles["RAM"]}>
+  //               <RamIcon />
+  //               <span>{varians?.[0]?.value} RAM</span>
+  //             </div>
+
+  //             <div className={styles["HDD"]}>
+  //               <HardIcon />
+  //               <span>256 GB SSD</span>
+  //             </div>
+  //           </div>
+  //         </div>
+
+  //         <div className={styles["laptop_best_sell_items-price"]}>
+  //           <div
+  //             style={{
+  //               display: "flex",
+  //               gap: "8px",
+  //               flexWrap: "wrap",
+  //             }}
+  //           >
+  //             {matchedUsages.map((item) => (
+  //               <div key={item.slug} className={styles["laptop-usage-label"]}>
+  //                 <span>{item.title}</span>
+  //               </div>
+  //             ))}
+  //           </div>
+
+  //           <div className={styles["laptop-price"]}>
+  //             {discountPrice ? (
+  //               <div className={styles["discount-wrapper"]}>
+  //                 <span
+  //                   style={{
+  //                     textDecoration: "line-through",
+  //                     color: "red",
+  //                     fontSize: "14px",
+  //                     display: "block",
+  //                   }}
+  //                 >
+  //                   {formatPrice(price)}
+
+  //                   {discountPrice && (
+  //                     <div className={styles["discount-percent"]}>
+  //                       {discountPercent}٪
+  //                     </div>
+  //                   )}
+  //                 </span>
+  //                 <span style={{ fontWeight: "bold" }}>
+  //                   {formatPrice(discountPrice)}
+  //                 </span>
+  //                 تومان
+  //               </div>
+  //             ) : (
+  //               <>
+  //                 <span>{formatPrice(finalPrice)}</span>
+  //                 تومان
+  //               </>
+  //             )}
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </Link>
+  // );
 }
 
 export default BestSellLaptopsCard;

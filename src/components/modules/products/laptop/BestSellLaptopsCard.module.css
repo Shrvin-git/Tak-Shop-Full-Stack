@@ -7,7 +7,83 @@
   width: 49%;
 }
 
-/* =========== popular_laptop ============= */
+.specs_grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin:18px 0;
+}
+
+.spec_item{
+display:flex;
+align-items:center;
+gap:8px;
+padding:10px;
+background:#fafafa;
+border-radius:10px;
+font-size:13px;
+color:var(--links-color);
+}
+
+.rank{
+width:32px;
+height:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:var(--bg-color-violet);
+color:var(--main-color);
+font-weight:bold;
+flex-shrink:0;
+}
+
+.laptop_best_sell_items_price{
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+gap:18px;
+margin-top:18px;
+padding-top:16px;
+border-top:1px solid var(--border-color);
+}
+
+.usage_wrapper{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.laptop_usage_label{
+background:var(--bg-color-violet);
+padding:6px 12px;
+border-radius:30px;
+font-size:12px;
+color:var(--label);
+}
+
+.old_price{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:13px;
+color:#999;
+text-decoration:line-through;
+}
+
+.new_price{
+font-size:22px;
+font-weight:bold;
+}
+
+.discount_percent{
+background:#ff4747;
+color:#fff;
+padding:2px 8px;
+border-radius:6px;
+font-size:11px;
+text-decoration:none;
+}
 
 .popular_laptop {
   margin: 10rem 0;
@@ -19,7 +95,6 @@
   object-fit: cover;
 }
 
-/* =========== Laptop Brand ============= */
 .hero-section {
   /* margin-top: 10rem; */
 }
@@ -285,216 +360,344 @@
   }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 1400px) {
-  .blog_date,
-  .blog_category {
-    padding: 0 1rem;
+/* =======================================================
+   1200px
+======================================================= */
+
+@media (max-width: 1200px) {
+  .link {
+    width: 48.8%;
   }
 
-  .accordion_title {
-    font-size: 2rem;
-  }
-}
-
-/* =========================================================================================== */
-@media screen and (max-width: 1200px) {
-  .hero-section-slider {
-    height: 30rem;
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.7rem;
   }
 
-  .laptop_brnad_img {
-    width: 13rem;
-    height: 13rem;
+  .div1 {
+    font-size: 13px;
   }
 
-  .laptop_brnad_img img {
-    width: 80%;
-  }
-
-  .laptop_brand_items {
-    padding: 2rem 0;
-  }
-
-  .faq_right {
-    width: 26rem;
-  }
-
-  .faq_left {
-    width: 65rem;
-  }
-}
-
-/* =========================================================================================== */
-@media screen and (max-width: 992px) {
-  .blog_title {
-    font-size: 1.4rem;
-  }
-
-  .blog_date,
-  .blog_category {
-    font-size: 1.2rem !important;
-  }
-
-  .laptop_best_sell_items-header {
-    font-size: 1.6rem;
-  }
-
-  .laptop_best_sell_items_left {
-    width: 100%;
-  }
-
-  .laptop_best_sell_items_right img {
-    width: 45%;
+  .laptop-price span {
+    font-size: 1.8rem;
   }
 
   .laptop_best_sell_items_right {
+    width: 28%;
+  }
+
+  .laptop_best_sell_items_left {
+    width: 70%;
+  }
+}
+
+/* =======================================================
+   992px
+======================================================= */
+
+@media (max-width: 992px) {
+  .link {
     width: 100%;
   }
 
   .laptop_best_sell_items {
-    flex-direction: column;
+    padding: 1.6rem;
   }
 
-  .category-by-price-item img {
-    width: 80%;
+  .laptop_best_sell_items_right {
+    width: 24%;
   }
 
-  .category-by-price-item {
-    padding: 1rem 0;
+  .laptop_best_sell_items_left {
+    width: 73%;
   }
 
-  .faq_wrapper {
-    flex-direction: column;
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.6rem;
   }
 
-  .faq_right,
-  .faq_left {
+  .div1 {
+    font-size: 13px;
+  }
+
+  .laptop-price span {
+    font-size: 1.8rem;
+  }
+}
+
+/* =======================================================
+   768px
+======================================================= */
+
+@media (max-width: 768px) {
+  .laptop_best_sell_items {
+    gap: 1.3rem;
+    padding: 1.5rem;
+  }
+
+  .laptop_best_sell_items_right {
+    width: 26%;
+  }
+
+  .laptop_best_sell_items_right img {
     width: 100%;
   }
-}
 
-/* =========================================================================================== */
-@media screen and (max-width: 768px) {
-  .hero-section {
-    height: 20rem;
+  .laptop_best_sell_items_left {
+    width: 72%;
   }
 
-  .hero-section-slider {
-    height: 21rem !important;
+  .laptop_best_sell_items-header {
+    align-items: flex-start;
   }
 
-  .main {
-    padding-top: 2.5rem;
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.45rem;
+    line-height: 1.8;
   }
 
-  .hero-section-slider .swiper-button-next,
-  .hero-section-slider .swiper-button-prev {
-    display: none;
-  }
-
-  .laptop-usage-label {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    width: 30%;
-  }
-
-  .category-by-cpu img {
-    width: 75%;
-  }
-}
-
-/* =========================================================================================== */
-@media screen and (max-width: 576px) {
-  .hero-section {
-    height: 10rem;
-  }
-
-  .hero-section-slider {
-    height: 13.5rem !important;
-    border-radius: 1rem;
-  }
-
-  .laptop_brnad_img {
-    width: 11rem;
-    height: 11rem;
-  }
-
-  .laptop_brand_items a {
-    gap: 1rem;
-  }
-
-  .laptop_brnad_img img {
-    width: 75%;
-  }
-
-  .laptop_by_usage {
-    padding: 1.5rem;
+  .laptop_best_sell_items-main {
+    margin-top: 1rem;
   }
 
   .div1 {
     font-size: 12px;
   }
 
-  .laptop-usage-label span {
-    font-size: 8px;
+  .div1 div {
+    gap: 0.5rem;
+  }
+
+  .laptop_best_sell_items-price {
+    margin-top: 1rem;
   }
 
   .laptop-price span {
-    font-size: 1.6rem;
-  }
-
-  .laptop_best_sell_items-header {
-    align-items: baseline;
-  }
-
-  .accordion_title {
-    font-size: 1.4rem;
-  }
-
-  .blog-slider .swiper-button-prev,
-  .blog-slider .swiper-button-next {
-    width: 3rem !important;
-    height: 3rem !important;
-    border-radius: 0.6rem !important;
-  }
-
-  .blog-slider .swiper-button-prev svg,
-  .blog-slider .swiper-button-next svg {
-    width: 1.2rem !important;
-    height: 1.2rem !important;
-  }
-
-  .laptop_best_sell_items-header {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 470px) {
-  .laptop_best_sell_items {
+/* =======================================================
+   576px
+======================================================= */
+
+@media (max-width: 576px) {
+  .link {
     width: 100%;
-    flex-direction: row;
+  }
+
+  .laptop_best_sell_items {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 1.8rem;
+
+    gap: 1.6rem;
   }
 
   .laptop_best_sell_items_right {
-    width: 40%;
-  }
-
-  .laptop_best_sell_items_left {
-    width: 60%;
+    width: 100%;
   }
 
   .laptop_best_sell_items_right img {
-    width: 80%;
+    width: 180px;
+    max-width: 100%;
+  }
+
+  .laptop_best_sell_items_left {
+    width: 100%;
+  }
+
+  .laptop_best_sell_items-header {
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    padding-bottom: 1rem;
+  }
+
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.55rem;
+
+    line-height: 1.9;
   }
 
   .laptop_best_sell_items-main {
-    text-align: center;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.2rem;
+
+    margin: 1.5rem 0;
+  }
+
+  .div1 {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    font-size: 13px;
+  }
+
+  .div1 div {
+    margin-top: 0;
+
+    gap: 0.6rem;
+  }
+
+  .laptop_best_sell_items-price {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1rem;
+  }
+
+  .laptop_best_sell_items-price > div:first-child {
+    justify-content: center;
+  }
+
+  .laptop-usage-label span {
+    font-size: 11px;
+
+    padding: 0.5rem 1.2rem;
+  }
+
+  .discount-wrapper {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.5rem;
+  }
+
+  .laptop-price {
+    font-size: 1.5rem;
+  }
+
+  .laptop-price span {
+    font-size: 2rem;
   }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 400px) {
+/* =======================================================
+   470px
+======================================================= */
+
+@media (max-width: 470px) {
+  .laptop_best_sell_items {
+    padding: 1.4rem;
+  }
+
+  .laptop_best_sell_items_right img {
+    width: 150px;
+  }
+
+  .laptop_best_sell_items-header {
+    flex-direction: column;
+
+    gap: 0.4rem;
+  }
+
+  .laptop_best_sell_items-header span {
+    font-size: 1.4rem;
+  }
+
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.35rem;
+
+    line-height: 1.8;
+  }
+
+  .laptop_best_sell_items-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+  }
+
+  .div1 {
+    gap: 0.8rem;
+
+    font-size: 11px;
+  }
+
+  .div1 div {
+    padding: 0.7rem;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+  }
+
+  .laptop_best_sell_items-price {
+    gap: 0.8rem;
+  }
+
+  .laptop-usage-label span {
+    font-size: 10px;
+
+    padding: 0.45rem 1rem;
+  }
+
+  .laptop-price {
+    font-size: 1.3rem;
+  }
+
+  .laptop-price span {
+    font-size: 1.7rem;
+  }
+
+  .discount-percent {
+    font-size: 10px;
+  }
+}
+
+/* =======================================================
+   400px
+======================================================= */
+
+@media (max-width: 400px) {
+  .laptop_best_sell_items {
+    padding: 1.2rem;
+  }
+
+  .laptop_best_sell_items_right img {
+    width: 130px;
+  }
+
+  .laptop_best_sell_items-main {
+    grid-template-columns: 1fr;
+  }
+
+  .div1 {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    gap: 0.8rem;
+  }
+
+  .div1 div {
+    width: 48%;
+  }
+
+  .laptop_best_sell_items-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .laptop-price span {
+    font-size: 1.5rem;
+  }
 }
