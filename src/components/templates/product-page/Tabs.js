@@ -65,7 +65,7 @@ function Tabs({ product }) {
           class={styles["toggle-btn"]}
           id="toggleDesc"
         >
-          {isDetailsOpen ? " نمایش جزییات بیشتر" : " نمایش جزییات کمتر"}
+          {isDetailsOpen ? "نمایش جزئیات کمتر" : "نمایش جزئیات بیشتر"}
         </span>
       </div>
     </div>

@@ -119,248 +119,149 @@
   filter: brightness(1.1);
 }
 
-/* ? Media Queries ================================================================ */
+/* ===========================
+   Responsive - Comment Form
+=========================== */
 
+@media (max-width: 1200px) {
+  .comment-form-card {
+    padding: 1.8rem;
+  }
 
-@media (min-width: 1400px) {
-    .container {
-        width: 1250px;
-    }
+  .comment-form__row {
+    gap: 0.8rem;
+  }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 1400px) {}
+@media (max-width: 992px) {
+  .comment-form-card {
+    padding: 1.6rem;
+  }
 
-/* =========================================================================================== */
-@media screen and (max-width: 1200px) {
-    .product-title h1 {
-        font-size: 2rem;
-    }
+  .comment-form-title {
+    font-size: 1.5rem;
+  }
 
-    .pop {
-        gap: 15rem;
-    }
+  .comment-form__btn {
+    width: 100%;
+  }
 
-    .product-footer-right-items {
-        height: auto;
-    }
-
-    .product-footer-right {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 29rem;
-    }
-
-    .product-footer-right h4 {
-        margin-bottom: 0;
-    }
-
-    .brand-product {
-        font-size: 1.6rem;
-    }
-
-    .product-footer-right-items svg {
-        width: 2.3rem;
-        height: 2.5rem;
-    }
+  .comment-form__textarea {
+    min-height: 110px;
+  }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 992px) {
-    .main {
-        padding-top: 0;
-    }
+@media (max-width: 768px) {
+  .comment-form-card {
+    padding: 1.4rem;
+  }
 
-    .pop {
-        gap: 20rem;
-    }
+  .comment-form__row {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
 
-    .product-header {
-        flex-direction: column;
-    }
+  .comment-form__input {
+    height: 40px;
+    font-size: 14px;
+  }
 
-    .product-header_right {
-        width: 100%;
-        padding: 0;
-        border: none;
-    }
+  .comment-form__textarea {
+    min-height: 100px;
+    font-size: 14px;
+  }
 
-    .product-header_right_footer {
-        justify-content: space-evenly;
-    }
+  .comment-form__btn {
+    font-size: 1.2rem;
+    height: 46px;
+  }
 
-    .product-header_right img {
-        width: 60%;
-    }
+  .rate {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
 
-    .product-header_right--activ {
-        transition: transform 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .product-images {
-        height: auto;
-        width: 10rem;
-    }
-
-    .product-images-wrapper {
-        justify-content: space-evenly;
-    }
-
-    .product-header_left {
-        width: 100%;
-        margin-top: 3rem;
-    }
-
-    .product-footer-right-items {
-        padding: 1rem;
-    }
-
-    .best-sell-title {}
-
-    .orginal_price {
-        font-size: 1.6rem;
-    }
+  .rate-stars svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 768px) {
-    .products_main {
-        flex-direction: column-reverse;
-        row-gap: 2rem;
-    }
+@media (max-width: 576px) {
+  .comment-form-card {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
 
-    .pop {
-        gap: 0;
-        justify-content: space-between;
-    }
+  .comment-form-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
 
-    .products_main_colors {
-        margin-bottom: 2rem;
-    }
+  /* فقط روی موبایل زیر هم */
+  .comment-form__row {
+    flex-direction: column;
+  }
 
-    .product-footer {
-        flex-direction: column;
-        row-gap: 3rem;
-    }
+  .comment-form__input {
+    width: 100%;
+  }
 
-    .product-footer-right,
-    .product-footer-left {
-        width: 100%;
-    }
+  .comment-form__textarea {
+    min-height: 90px;
+    padding: 0.8rem;
+  }
 
-    .product-footer-right {
-        height: auto;
-    }
+  .comment-form__btn {
+    width: 100%;
+    font-size: 1.15rem;
+  }
 
-    .description-container {
-        flex-direction: column-reverse;
-        row-gap: 3rem;
-    }
+  .rate {
+    justify-content: space-between;
+  }
 
-    .description-left,
-    .description-right {
-        width: 100%;
-    }
+  .rate p {
+    bottom: 0;
+    font-size: 14px;
+  }
 
-    .description-left img {
-        width: 70%;
-    }
-
-    .description-title {
-        display: none;
-    }
+  .rate-stars svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
-/* =========================================================================================== */
-@media screen and (max-width: 576px) {
-    .product-specs__row {
-        height: 6rem;
-    }
+@media (max-width: 400px) {
+  .comment-form-card {
+    padding: 1rem;
+  }
 
-    .product-specs__title {
-        font-size: 2rem;
-    }
+  .comment-form-title {
+    font-size: 1.3rem;
+  }
 
-    .best-sell-title {
-        font-size: 1.4rem;
-    }
+  .comment-form__input {
+    height: 38px;
+    font-size: 13px;
+  }
 
-    .review-content p {
-        font-size: 12px;
-    }
+  .comment-form__textarea {
+    font-size: 13px;
+  }
 
-    .review-content strong {
-        margin: .5rem 0;
-        font-size: 1.4rem;
-    }
+  .comment-form__btn {
+    height: 44px;
+    font-size: 1.1rem;
+  }
 
-    .review-meta span {
-        font-size: 12px;
-    }
+  .rate-stars {
+    gap: 2px;
+  }
 
-    .review-rating svg {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .review-date svg {
-        width: 1.5rem;
-    }
-
-    .review-meta {
-        gap: 1.5rem;
-    }
-
-    .avatar {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .reviewer-name {
-        font-size: 14px;
-    }
-
-    .badge {
-        font-size: 10px;
-    }
-
-    .review-actions {
-        justify-content: space-between;
-    }
-
-    .action {
-        font-size: 12px;
-        width: 48%;
-        padding: 8px;
-    }
-
-    .action svg {
-        width: 2rem;
-        height: 2rem;
-    }
-
-
-    .best-sell-slider .swiper-button-prev,
-    .best-sell-slider .swiper-button-next {
-        width: 3rem !important;
-        height: 3rem !important;
-        border-radius: .6rem !important;
-    }
-
-    .best-sell-slider .swiper-button-prev svg,
-    .best-sell-slider .swiper-button-next svg {
-        width: 1.2rem !important;
-        height: 1.2rem !important;
-    }
+  .rate-stars svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
 }
-
-/* =========================================================================================== */
-@media screen and (max-width: 470px) {}
-
-/* =========================================================================================== */
-@media screen and (max-width: 400px) {}

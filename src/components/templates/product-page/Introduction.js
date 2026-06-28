@@ -12,8 +12,7 @@ function Introduction() {
             className={
               styles[isDetailsOpen ? "all-details-open" : "all-details"] +
               " " +
-              styles["description-text"] 
-
+              styles["description-text"]
             }
             id={styles["descText"]}
           >
@@ -99,7 +98,7 @@ function Introduction() {
         className={styles["toggle-btn"]}
         id={styles["toggleDesc"]}
       >
-        {isDetailsOpen ? " نمایش جزییات بیشتر" : " نمایش جزییات کمتر"}
+        {isDetailsOpen ? "نمایش جزئیات کمتر" : "نمایش جزئیات بیشتر"}{" "}
       </button>
     </div>
   );

@@ -56,31 +56,6 @@ function Gallery({ product }) {
   return (
     <div className={styles["product-header_right"]}>
       <ProductGalleryImages product={product} />
-      {/* <div className={styles["product-header_right--activ"]}>
-        <img src="/images/product-image/product-image2.png" alt="" />
-      </div>
-
-      <div className={styles["product-images-wrapper"]}>
-        <div className={styles["product-images"]}>
-          <img src="/images/product-image/product-image2.png" alt="" />
-          <div className={styles["product-images-blur"]}></div>
-        </div>
-
-        <div className={styles["product-images"]}>
-          <img src="/images/product-image/product-image3.png" alt="" />
-          <div className={styles["product-images-blur"]}></div>
-        </div>
-
-        <div className={styles["product-images"]}>
-          <img src="/images/product-image/product-image4.png" alt="" />
-          <div className={styles["product-images-blur"]}></div>
-        </div>
-
-        <div className={styles["product-images"]}>
-          <img src="/images/product-image/product-image5.png" alt="" />
-          <div className={styles["product-images-blur"]}></div>
-        </div>
-      </div> */}
 
       <div className={styles["product-header_right_footer"]}>
         <div className={styles["svg-product"]}>
